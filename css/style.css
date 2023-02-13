@@ -125,10 +125,15 @@ section a{
 section ul li img{
     image-rendering: optimizeQuality;
     width: 200px;
+    height: 325px;
     transition-duration: 95ms;
 }
 section ul li img:hover{
     transform: scale(1.2);
+}
+.imagenCartas{
+    height: 250px;
+    width: 250px;
 }
 
 /* Contactos */
