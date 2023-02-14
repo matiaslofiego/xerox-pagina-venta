@@ -4,6 +4,7 @@
 }
 
 /* Index/Inicio */
+
 h1{
     text-align: center;
     font-size: 50px;
@@ -11,7 +12,6 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     color: azure;
     background-color: rgb(106, 9, 170);
-
 }
 .tituloXerox{
     padding: 13px;
@@ -73,7 +73,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content:space-evenly ;
+    justify-content: space-evenly ;
 }
 .xeroxLista{
     display: inline-block;
@@ -114,7 +114,7 @@ section a{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     border: medium;
 }
@@ -162,6 +162,14 @@ div{
     align-items: baseline;
     grid-template-columns: 1fr 1fr;
     width: 700px;
+}
+@media screen and (min-width: 0px) and (max-width:576px) {
+    div{
+        grid-template-columns: 90vw;
+        grid-template-rows: auto auto;
+        grid-template-areas: "ul"
+                            "form";
+    }
 }
 div ul li a{
     color: black;
