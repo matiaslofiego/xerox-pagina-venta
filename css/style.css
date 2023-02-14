@@ -175,24 +175,6 @@ div ul li a{
 div ul li img{
     width: 25px;
 }
-.nombre{
-    margin: 0px 30px 0px 0px;
-}
-.fecha{
-    margin: 0px 30px 0px 0px;
-}
-.email{
-    margin: 0px 30px 0px 0px;
-}
-.telefono{
-    margin: 0px 30px 0px 0px;
-}
-.pais{
-    margin: 0px 30px 0px 0px;
-}
-.comentario{
-    margin: 0px 30px 0px 0px;
-}
 .comentarioContacto{
     margin: 20px;
     list-style-type: none;
