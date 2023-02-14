@@ -135,8 +135,6 @@ section ul li img:hover{
 /* Contactos */
 .contactoNav{
     margin: 30px 0px 0px 150px;
-    white-space: normal;
-    list-style-type: none;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 550;
@@ -148,15 +146,12 @@ section ul li img:hover{
     grid-template-columns: 270px;
 }
 main div ul li img{
-    margin: 0px 20px;
+    margin: 0px 15px;
 }
 .contactoInfo{
     margin: 30px 0px 0px 150px;
-    list-style-type: none;
     border: 0ch;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: grid;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 550;
 }
@@ -169,21 +164,13 @@ div{
     width: 700px;
 }
 div ul li a{
-    text-decoration: none;
     color: black;
 }
 div ul li img{
     width: 25px;
-}
-.comentarioContacto{
-    margin: 20px;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
 }
 .enviar{
     display: flex;
     justify-content: end;
     width: 700px;
 }
-
