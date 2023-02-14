@@ -164,10 +164,9 @@ div{
     margin: 20px;
     list-style-type: none;
     display: grid;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 500px;
+    align-items: baseline;
+    grid-template-columns: 1fr 2fr;
+    width: 700px;
 }
 div ul li a{
     text-decoration: none;
@@ -203,6 +202,6 @@ div ul li img{
 .enviar{
     display: flex;
     justify-content: end;
-    width: 65px;
+    width: 700px;
 }
 
