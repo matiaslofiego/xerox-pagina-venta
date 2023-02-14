@@ -60,10 +60,6 @@ header{
 body{
     background-color: azure;
 }
-main{
-    display: grid;
-    justify-content: flex-start;
-}
 .xeroxNav{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -168,7 +164,9 @@ div{
     margin: 20px;
     list-style-type: none;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 500px;
 }
 div ul li a{
