@@ -4,16 +4,26 @@
 }
 
 /* Index/Inicio */
-@media screen and (min-width:768px) and (max-width:1200px) {
-    
+@media screen and (min-width:550px) and (max-width:1520px) {
+    h1{
+        
+    }
+    header{
+
+    }
+    footer{
+
+    }
 }
 h1{
     text-align: center;
     font-size: 50px;
+    font-weight: 550;
     padding-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: azure;
     background-color: rgb(106, 9, 170);
+    margin-bottom: 0px;
 }
 .tituloXerox{
     padding: 13px;
@@ -57,7 +67,6 @@ header{
     text-align: center;
     color: black;
     background-color: rgb(106, 9, 170);
-    padding: 5px;
 }
 body{
     background-color: azure;
@@ -137,9 +146,10 @@ section ul li img:hover{
 /* Contactos */
 .contactoNav{
     margin: 30px 0px 0px 150px;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 550;
+    grid-area: ul;
 }
 .contactoComentario{
     margin: 0px 0px 15px 0px;
@@ -151,27 +161,38 @@ main div ul li img{
     margin: 0px 15px;
 }
 .contactoInfo{
-    margin: 30px 0px 0px 300px;
+    margin: 30px 0px 0px 500px;
     border: 0ch;
     display: grid;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 550;
 }
 div{
-    margin: 20px;
-    list-style-type: none;
+    margin: 20px 0px 20px 0px;
     display: grid;
     align-items: baseline;
-    grid-template-columns: 1fr 1fr;
-    width: 700px;
+    grid-template-columns: 1fr;
+    width: 600px;
+    grid-template-areas: 
+                        "ul form"
 }
-@media screen and (min-width: 0px) and (max-width:576px) {
+@media screen and (min-width: 500px) and (max-width:1520px) {
     div{
-        grid-template-columns: 90vw;
-        grid-template-rows: auto auto;
+        grid-template-columns: 40vw;
+        grid-template-rows: auto;
         grid-template-areas: "ul"
                             "form";
     }
+    .contactoNav{
+        margin: 30px 0px 0px 50px;
+    }
+    .contactoInfo{
+        margin: 0px 0px 0px 50px;
+    }
+    .enviar{
+
+    }
+
 }
 div ul li a{
     color: black;
@@ -181,6 +202,6 @@ div ul li img{
 }
 .enviar{
     display: flex;
-    justify-content: end;
-    width: 700px;
+
+    width: 700;
 }
