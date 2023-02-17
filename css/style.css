@@ -137,7 +137,7 @@ section ul li img:hover{
     display: grid;
 
 }
-@media screen and (min-width:576px) and (max-width:1300px) {
+@media screen and (min-width:0px) and (max-width:1300px) {
     .contactoMain{
         justify-items: center
     }
@@ -175,7 +175,7 @@ div{
     grid-template-areas: 
                         "ul form"
 }
-@media screen and (min-width: 576px) and (max-width:1300px) {
+@media screen and (min-width: 0px) and (max-width:1300px) {
     div{
         grid-template-columns: 40vw;
         grid-template-rows: auto;
