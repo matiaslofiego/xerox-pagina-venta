@@ -4,17 +4,6 @@
 }
 
 /* Index/Inicio */
-@media screen and (min-width:550px) and (max-width:1520px) {
-    h1{
-        
-    }
-    header{
-
-    }
-    footer{
-
-    }
-}
 h1{
     text-align: center;
     font-size: 50px;
@@ -88,12 +77,12 @@ body{
 }
 .xeroxLista{
     display: inline-block;
+    list-style: none;
     padding: 15px;
     color: black;
     text-decoration: none;
     transition-property: all;
     transition-duration: 95ms;
-
 }
 .xeroxLista:hover{
     transform: scale(1.5);
@@ -144,6 +133,14 @@ section ul li img:hover{
 }
 
 /* Contactos */
+.contactoMain{
+    display: grid;
+}
+@media screen and (min-width:576px) and (max-width:1200px) {
+    .contactoMain{
+        justify-items: center
+    }
+}
 .contactoNav{
     margin: 30px 0px 0px 150px;
     padding: 20px 20px 20px 0px;
@@ -151,6 +148,7 @@ section ul li img:hover{
     font-weight: 550;
     grid-area: ul;
 }
+
 .contactoComentario{
     margin: 0px 0px 15px 0px;
     display: grid;
@@ -176,7 +174,7 @@ div{
     grid-template-areas: 
                         "ul form"
 }
-@media screen and (min-width: 500px) and (max-width:1520px) {
+@media screen and (min-width: 576px) and (max-width:1200px) {
     div{
         grid-template-columns: 40vw;
         grid-template-rows: auto;
@@ -185,14 +183,11 @@ div{
     }
     .contactoNav{
         margin: 30px 0px 0px 50px;
+        padding: 0px 0px 0px 120px;
     }
     .contactoInfo{
-        margin: 0px 0px 0px 50px;
+        margin: 30px 0px 0px 150px;
     }
-    .enviar{
-
-    }
-
 }
 div ul li a{
     color: black;
