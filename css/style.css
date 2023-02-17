@@ -13,21 +13,26 @@ h1{
     color: azure;
     background-color: rgb(106, 9, 170);
     margin-bottom: 0px;
+    height: 80px;
 }
 .tituloXerox{
     padding: 13px;
 }
 .tituloXerox:hover{
-    animation: XEROX 1s;
+    animation: XEROX 180s;
 }
 @keyframes XEROX{
     0%{
-        border-radius: 20%;
+        border-radius: 40%;
+        background-color: rgb(210, 141, 250);
     }
     25%{
         border-radius: 50%;
     }
     40%{
+        background-color: rgb(210, 141, 250);
+    }
+    100%{
         background-color: rgb(210, 141, 250);
     }
 }
@@ -52,7 +57,7 @@ header{
     font-weight: 600;
     font-style: normal;
     font-size: 18px;
-    line-height: 25px;
+    padding: 5px;
     text-align: center;
     color: black;
     background-color: rgb(106, 9, 170);
@@ -68,7 +73,7 @@ body{
     line-height: 25px;
     color: black;
     background-color: rgb(106, 9, 170);
-    padding: 5px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -86,14 +91,17 @@ body{
 .xeroxLista:hover{
     transform: scale(1.5);
 }
+nav{
+    height: 60px;
+}
 nav ul li a{
     text-decoration: none;
     color: azure;
-    padding: 5px;
+
 }
 footer{
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 200px;
+    margin-top: 100px;
     padding: 30px;
     color: azure;
     background-color: rgb(96, 102, 102);
@@ -114,12 +122,10 @@ section a{
     font-weight: 600;
     text-align: center;
     font-size: 14px;
-    text-transform: uppercase;
-    border: medium;
+    display: grid;
+    justify-items: center;
 }
 section ul li img{
-    image-rendering: optimizeQuality;
-    width: 200px;
     height: 325px;
     transition-duration: 95ms;
 }
