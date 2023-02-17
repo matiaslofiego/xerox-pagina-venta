@@ -22,10 +22,10 @@ h1{
 }
 @keyframes XEROX{
     0%{
-        border-radius: 50%;
+        border-radius: 20%;
     }
     25%{
-        
+        border-radius: 50%;
     }
     40%{
         background-color: rgb(210, 141, 250);
