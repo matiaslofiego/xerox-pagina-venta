@@ -38,6 +38,7 @@ h1{
 h2{
     margin: 30px 30px 0px 30px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 @media screen and (min-width:0px) and (max-width:992px) {
     h2{
@@ -52,9 +53,12 @@ h2{
 h3{
     margin: 30px 30px 0px 30px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
 }
 h4{
     text-transform: uppercase;
+    font-weight: 700;
 }
 a{
     list-style-type: none;
@@ -145,7 +149,7 @@ section a{
     text-transform: uppercase;
 }
 section ul li img{
-    height: 325px;
+    height: 300px;
     transition-duration: 95ms;
 }
 section ul li img:hover{
@@ -192,6 +196,7 @@ div{
     margin: 20px 0px 20px 0px;
     display: grid;
     align-items: baseline;
+    text-overflow: ellipsis;
     grid-template-columns: 1fr;
     width: 600px;
     grid-template-areas: 
