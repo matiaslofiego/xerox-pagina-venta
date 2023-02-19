@@ -13,9 +13,6 @@ h1{
     color: azure;
     background-color: rgb(106, 9, 170);
     margin-bottom: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .tituloXerox{
     padding: 13px;
@@ -26,7 +23,6 @@ h1{
 @keyframes XEROX{
     0%{
         border-radius: 40%;
-
     }
     25%{
         border-radius: 50%;
@@ -79,6 +75,19 @@ header{
     background-color: rgb(106, 9, 170);    
     padding: 5px;
     display: grid;
+}
+.divInicio{
+    display: flex;
+}
+@media screen and (min-width:768px) {
+    .divInicio{
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+    nav.row{
+        display: none;
+    }
 }
 body{
     background-color: azure;
