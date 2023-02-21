@@ -219,7 +219,7 @@ section ul li img:hover{
 .contactoMain{
     display: grid;
 }
-@media screen and (min-width: 0px) and (max-width:1400px) {
+@media screen and (min-width: 0px) and (max-width:1300px) {
     .contactoMain{
         justify-items: center
     }
@@ -256,7 +256,12 @@ main div ul li img{
     grid-template-areas: 
                         "ul form"
 }
-@media screen and (min-width: 0px) and (max-width:1400px) {
+@media screen and (min-width: 0px) and (max-width:1535px) {
+    .contactoInfo{
+        margin: 30px 0px 0px 200px; ;
+    }
+}
+@media screen and (min-width: 0px) and (max-width:1300px) {
     .contactoDiv{
         grid-template-columns: 60vw;
         grid-template-rows: auto;
@@ -274,7 +279,7 @@ main div ul li img{
 @media screen and (min-width:0px) and (max-width:576px) {
     .contactoNav{
         padding: 5px 0px 0px 40px;
-        margin: 60px 0px 0px 50px;
+
     }
     .contactoInfo{
         margin: 30px 0px 0px 120px;
@@ -286,7 +291,9 @@ div ul li a{
 div ul li img{
     width: 25px;
 }
-
+.comentarioDisplay{
+    display: flex;
+}
 .enviar{
     display: flex;
     width: 700;

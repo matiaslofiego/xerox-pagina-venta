@@ -101,10 +101,10 @@
                         <label for="floatingTextarea">NOMBRE</label>
                     </div>
 
-                    <div class="contactoDiv">
-                        <label for="edad">FECHA DE NACIMIENTO</label>
-                        <input type="date" name="fecha" id="fecha" required>
-                    </div>
+                    <div class="form-floating contactoDiv">
+                        <input type="date" name="fecha" class="form-control" placeholder="Fecha" required>
+                        <label for="floatingTextarea">FECHA DE NACIMIENTO</label>
+                    </div>      
 
                     <div class="form-floating contactoDiv">
                         <input type="email" name="email" class="form-control" id="floatingInput"
@@ -136,7 +136,7 @@
                     <div class="form-floating contactoDiv">
                         <textarea name="comentario" class="form-control" placeholder="Dejanos tu comentario"
                             id="floatingTextarea2" style="height: 200px"></textarea>
-                        <label for="floatingTextarea">DEJANOS TU COMENTARIO (OPCIONAL)</label>
+                        <label class="comentarioDisplay" for="floatingTextarea">DEJANOS TU COMENTARIO</label>
                     </div>
 
                     <div class="enviar contactoDiv">
