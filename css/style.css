@@ -192,7 +192,7 @@ section a{
     color: azure;
 }
 .imagenLista{
-    margin: 30px;
+    margin: 30px 30px 30px 30px;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -201,9 +201,11 @@ section a{
     display: grid;
     justify-items: center;
     text-transform: uppercase;
+    justify-content: center;
 }
 section ul li img{
     height: 300px;
+    width: 200px;
     transition-duration: 95ms;
 }
 section ul li img:hover{
@@ -213,12 +215,11 @@ section ul li img:hover{
     height: 250px;
     width: 250px;
 }
-
 /* Contactos */
 .contactoMain{
     display: grid;
 }
-@media screen and (min-width: 0px) and (max-width:1300px) {
+@media screen and (min-width: 0px) and (max-width:1400px) {
     .contactoMain{
         justify-items: center
     }
@@ -249,16 +250,15 @@ main div ul li img{
 .contactoDiv{
     margin: 20px 0px 20px 0px;
     display: grid;
-    align-items: baseline;
-    text-overflow: ellipsis;
+    align-items: start;
     grid-template-columns: 1fr;
     width: 600px;
     grid-template-areas: 
                         "ul form"
 }
-@media screen and (min-width: 0px) and (max-width:1300px) {
+@media screen and (min-width: 0px) and (max-width:1400px) {
     .contactoDiv{
-        grid-template-columns: 40vw;
+        grid-template-columns: 60vw;
         grid-template-rows: auto;
         grid-template-areas: "ul"
                             "form";
@@ -286,6 +286,7 @@ div ul li a{
 div ul li img{
     width: 25px;
 }
+
 .enviar{
     display: flex;
     width: 700;
