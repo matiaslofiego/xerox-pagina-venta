@@ -10,9 +10,11 @@ h1{
     font-weight: 550;
     padding: 20px 0px 0px 0px;
     font-family: Arial, Helvetica, sans-serif;
-    color: azure;
     background-color: rgb(106, 9, 170);
     margin-bottom: 0px;
+}
+h1 a{
+    color: azure;
 }
 .tituloXerox{
     padding: 13px;
@@ -63,7 +65,6 @@ h4{
 a{
     list-style-type: none;
     text-decoration: none;
-    color: azure;
 }
 header{
     font-family: Arial, Helvetica, sans-serif;
@@ -114,7 +115,7 @@ body{
     font-style: normal;
     font-size: 19px;
     line-height: 25px;
-    color: black;
+
     background-color: rgb(106, 9, 170);
     display: flex;
     flex-wrap: wrap;
@@ -126,7 +127,6 @@ body{
     display: inline-block;
     list-style: none;
     padding: 10px;
-    color: black;
     text-decoration: none;
     transition-property: all;
     transition-duration: 95ms;    
@@ -166,8 +166,11 @@ nav{
 }
 nav ul li a{
     text-decoration: none;
-    color: azure;
     padding: 5px;
+    color: azure;
+}
+nav ol li a{
+    color: black;
 }
 ul{
     padding-left: 0;
@@ -189,7 +192,6 @@ footer{
 }
 section a{
     text-decoration: none;
-    color: azure;
 }
 .imagenLista{
     margin: 30px 30px 30px 30px;
