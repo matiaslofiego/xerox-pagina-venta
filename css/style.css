@@ -1,8 +1,10 @@
 *{
     margin: 0%;
-    padding: 0%;
+    padding: 0%;    
+    box-sizing: content-box;
 }
 
+/*Inicio*/
 h1{
     text-align: center;
     font-size: 50px;
@@ -102,6 +104,7 @@ header{
 }
 main{
     margin-top: 150px;
+
 }
 body{
     background-color: azure;
@@ -219,6 +222,7 @@ section ul li img:hover{
     width: 250px;
 }
 
+/*Contactos*/
 .contactoMain{
     display: grid;
 }
@@ -248,7 +252,8 @@ main div ul li img{
     border: 0ch;
     display: grid;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 550;
+    font-weight: 550;    
+    box-sizing: border-box;
 }
 .contactoDiv{
     margin: 20px 0px 20px 0px;
