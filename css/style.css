@@ -1,307 +1,330 @@
-*{
-    margin: 0%;
-    padding: 0%;    
-    box-sizing: content-box;
+@keyframes XEROX {
+  0% {
+    border-radius: 40%;
+  }
+  25% {
+    border-radius: 50%;
+  }
+  40% {
+    background-color: rgb(156, 58, 212);
+  }
+  95% {
+    background-color: rgb(210, 141, 250);
+  }
+}
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
-/*Inicio*/
-h1{
-    text-align: center;
-    font-size: 50px;
-    font-weight: 550;
-    padding: 20px 0px 0px 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(106, 9, 170);
-    margin-bottom: 0px;
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 550;
+  padding: 20px 0px 0px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(106, 9, 170);
+  margin-bottom: 0px;
 }
-h1 a{
-    color: azure;
+h1 a {
+  color: azure;
 }
-.tituloXerox{
-    padding: 13px;
-}
-.tituloXerox:hover{
-    animation: XEROX 1s;
-}
-@keyframes XEROX{
-    0%{
-        border-radius: 40%;
-    }
-    25%{
-        border-radius: 50%;
-    }
-    40%{
-        background-color: rgb(156, 58, 212);
-    }
-    95%{
-        background-color: rgb(210, 141, 250);
-    }
-}
-h2{
-    margin: 30px 30px 0px 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-}
-@media screen and (min-width:0px) and (max-width:768px) {
-    h2{
-        margin-top: 20px;
-        padding: 10px 0px 0px 0px;
-    }
-}
-h3{
-    margin: 30px 30px 0px 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 17px;
-}
-h4{
-    text-transform: uppercase;
-    font-weight: 700;
-}
-a{
-    list-style-type: none;
-    text-decoration: none;
-}
-header{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 25px;
-    text-align: center;
-    color: black;
-    background-color: rgb(106, 9, 170);    
-    padding: 5px;
-    display: grid;
-}
-.divInicio{
-    display: flex;
-    align-content: center;
-    background-color: rgb(106, 9, 170);
-}
-.navbarLinks{
-    background-color: rgb(106, 9, 170);
-    display: flex;
-    flex-direction: column;
-}
-@media screen and (min-width:768px) {
-    .divInicio{
-        display: none;
-    }
-    .navbarLinks{
-        display: none;
-    }
-}
-@media screen and (max-width:768px) {
-    nav.row{
-        display: none;
-    }
-    header{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-}
-main{
-    margin-top: 150px;
 
+.tituloXerox {
+  padding: 13px;
 }
-body{
-    background-color: azure;
+.tituloXerox:hover {
+  animation: XEROX 1s;
 }
-.breadcrumb{
-    margin: 20px 0px 0px 20px;
-}
-.xeroxNav{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 19px;
-    line-height: 25px;
 
-    background-color: rgb(106, 9, 170);
+h2 {
+  margin: 30px 30px 0px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+h3 {
+  margin: 30px 30px 0px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: black;
+  background-color: rgb(106, 9, 170);
+  padding: 5px;
+  display: grid;
+}
+
+.divInicio {
+  display: flex;
+  align-content: center;
+  background-color: rgb(106, 9, 170);
+}
+
+.navbarLinks {
+  background-color: rgb(106, 9, 170);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin-top: 150px;
+}
+main div ul li img {
+  margin: 0px 15px;
+}
+
+body {
+  background-color: azure;
+}
+
+.breadcrumb {
+  margin: 20px 0px 0px 20px;
+}
+
+.xeroxNav {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 25px;
+  background-color: rgb(106, 9, 170);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 0px;
+  align-items: center;
+}
+
+.xeroxLista {
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  text-decoration: none;
+  transition-property: all;
+  transition-duration: 95ms;
+  letter-spacing: 1px;
+  width: 160px;
+}
+.xeroxLista:hover {
+  transform: scale(1.5);
+}
+
+.xeroxNav1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 25px;
+  background-color: rgb(106, 9, 170);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 0px;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.xeroxLista1 {
+  display: inline-block;
+  list-style: none;
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  transition-property: all;
+  transition-duration: 95ms;
+  letter-spacing: 1px;
+}
+.xeroxLista1:hover {
+  transform: scale(1.4);
+}
+
+nav {
+  margin-bottom: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 5px;
+  color: azure;
+}
+nav ol li a {
+  color: black;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 110px;
+  padding: 30px;
+  color: azure;
+  background-color: rgb(96, 102, 102);
+  display: flex;
+  flex-direction: column;
+}
+
+.footerRedes {
+  width: 30px;
+}
+
+section a {
+  text-decoration: none;
+}
+section ul li img {
+  height: 300px;
+  width: 200px;
+  transition-duration: 95ms;
+}
+section ul li img:hover {
+  transform: scale(1.2);
+}
+
+.imagenLista {
+  margin: 30px 30px 30px 30px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+  display: grid;
+  justify-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+.imagenCartas {
+  height: 250px;
+  width: 250px;
+}
+
+.contactoMain {
+  display: grid;
+}
+
+.contactoNav {
+  margin: 30px 0px 0px 150px;
+  padding: 20px 20px 20px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  grid-area: ul;
+}
+
+.contactoComentario {
+  margin: 0px 0px 15px 0px;
+  display: grid;
+  grid-template-rows: 38px 5px;
+  grid-template-columns: 270px;
+}
+
+.contactoInfo {
+  margin: 30px 0px 0px 500px;
+  border: 0ch;
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+}
+
+.contactoDiv {
+  margin: 20px 0px 20px 0px;
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  width: 600px;
+  grid-template-areas: "ul form";
+}
+
+div ul li a {
+  color: black;
+}
+div ul li img {
+  width: 25px;
+}
+
+.comentarioDisplay {
+  display: flex;
+}
+
+.enviar {
+  display: flex;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  h2 {
+    margin-top: 20px;
+    padding: 10px 0px 0px 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .divInicio {
+    display: none;
+  }
+  .navbarLinks {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav.row {
+    display: none;
+  }
+  header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 0px;
-    align-items: center;
-}
-.xeroxLista{
-    display: inline-block;
-    list-style: none;
-    padding: 10px;
-    text-decoration: none;
-    transition-property: all;
-    transition-duration: 95ms;    
-    letter-spacing: 1px;    
-    width: 160px;
-}
-.xeroxNav1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 19px;
-    line-height: 25px;
-    background-color: rgb(106, 9, 170);
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 0px;
-    align-items: flex-start;
-    align-content: flex-start;
+  }
 }
-.xeroxLista1{
-    display: inline-block;
-    list-style: none;
-    padding: 10px 10px 10px 30px;
-    text-decoration: none;
-    transition-property: all;
-    transition-duration: 95ms;    
-    letter-spacing: 1px;
-}
-.xeroxLista:hover{
-    transform: scale(1.5);
-}
-.xeroxLista1:hover{
-    transform: scale(1.4);
-}
-nav{
-    margin-bottom: 10px;
-}
-nav ul li a{
-    text-decoration: none;
-    padding: 5px;
-    color: azure;
-}
-nav ol li a{
-    color: black;
-}
-ul{
-    padding-left: 0;
-}
-.row{
-    justify-content: space-evenly;
-}
-footer{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 110px;
-    padding: 30px;
-    color: azure;
-    background-color: rgb(96, 102, 102);
-    display: flex;
-    flex-direction: column;
-}
-.footerRedes{
-    width: 30px;
-}
-section a{
-    text-decoration: none;
-}
-.imagenLista{
-    margin: 30px 30px 30px 30px;
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    text-align: center;
-    font-size: 14px;
-    display: grid;
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+  .contactoMain {
     justify-items: center;
-    text-transform: uppercase;
-    justify-content: center;
+  }
+  .contactoDiv {
+    grid-template-columns: 60vw;
+    grid-template-rows: auto;
+    grid-template-areas: "ul" "form";
+  }
+  .contactoNav {
+    margin: 30px 0px 0px 50px;
+    padding: 0px 0px 0px 120px;
+  }
+  .contactoInfo {
+    margin: 30px 0px 0px 150px;
+  }
 }
-section ul li img{
-    height: 300px;
-    width: 200px;
-    transition-duration: 95ms;
+@media screen and (min-width: 0px) and (max-width: 1535px) {
+  .contactoInfo {
+    margin: 30px 0px 0px 200px;
+  }
 }
-section ul li img:hover{
-    transform: scale(1.2);
-}
-.imagenCartas{
-    height: 250px;
-    width: 250px;
+@media screen and (min-width: 0px) and (max-width: 576px) {
+  .contactoNav {
+    margin: 30px 0px 0px 35px;
+    padding: 5px 0px 0px 40px;
+  }
+  .contactoInfo {
+    margin: 30px 0px 0px 95px;
+  }
 }
 
-/*Contactos*/
-.contactoMain{
-    display: grid;
-}
-@media screen and (min-width: 0px) and (max-width:1300px) {
-    .contactoMain{
-        justify-items: center
-    }
-}
-.contactoNav{
-    margin: 30px 0px 0px 150px;
-    padding: 20px 20px 20px 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 550;
-    grid-area: ul;
-}
-.contactoComentario{
-    margin: 0px 0px 15px 0px;
-    display: grid;
-    grid-template-rows: 38px 5px;
-    grid-template-columns: 270px;
-}
-main div ul li img{
-    margin: 0px 15px;
-}
-.contactoInfo{
-    margin: 30px 0px 0px 500px;
-    border: 0ch;
-    display: grid;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 550;    
-    box-sizing: border-box;
-}
-.contactoDiv{
-    margin: 20px 0px 20px 0px;
-    display: grid;
-    align-items: start;
-    grid-template-columns: 1fr;
-    width: 600px;
-    grid-template-areas: 
-                        "ul form"
-}
-@media screen and (min-width: 0px) and (max-width:1535px) {
-    .contactoInfo{
-        margin: 30px 0px 0px 200px; ;
-    }
-}
-@media screen and (min-width: 0px) and (max-width:1300px) {
-    .contactoDiv{
-        grid-template-columns: 60vw;
-        grid-template-rows: auto;
-        grid-template-areas: "ul"
-                            "form";
-    }
-    .contactoNav{
-        margin: 30px 0px 0px 50px;
-        padding: 0px 0px 0px 120px;
-    }
-    .contactoInfo{
-        margin: 30px 0px 0px 150px;
-    }
-}
-@media screen and (min-width:0px) and (max-width:576px) {
-    .contactoNav{
-        margin: 30px 0px 0px 35px;
-        padding: 5px 0px 0px 40px;
-    }
-    .contactoInfo{
-        margin: 30px 0px 0px 95px;
-    }
-}
-div ul li a{
-    color: black;
-}
-div ul li img{
-    width: 25px;
-}
-.comentarioDisplay{
-    display: flex;
-}
-.enviar{
-    display: flex;
-}
+/*# sourceMappingURL=style.css.map */
