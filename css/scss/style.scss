@@ -72,34 +72,6 @@ header {
 	padding: 5px;
 	display: grid;
 }
-.divInicio {
-	display: flex;
-	align-content: center;
-	background-color: $background-color_1;
-}
-.navbarLinks {
-	background-color: $background-color_1;
-	display: flex;
-	flex-direction: column;
-}
-main {
-	margin-top: 150px;
-	div {
-		ul {
-			li {
-				img {
-					margin: 0px 15px;
-				}
-			}
-		}
-	}
-}
-body {
-	background-color: $background-color_2;
-}
-.breadcrumb {
-	margin: 20px 0px 0px 20px;
-}
 .xeroxNav {
 	font-family: $font-family_1;
 	font-weight: 600;
@@ -125,6 +97,16 @@ body {
 	&:hover {
 		transform: scale(1.5);
 	}
+}
+.divInicio {
+	display: flex;
+	align-content: center;
+	background-color: $background-color_1;
+}
+.navbarLinks {
+	background-color: $background-color_1;
+	display: flex;
+	flex-direction: column;
 }
 .xeroxNav1 {
 	font-family: $font-family_1;
@@ -152,6 +134,28 @@ body {
 		transform: scale(1.4);
 	}
 }
+body {
+	background-color: $background-color_2;
+}
+.breadcrumb {
+	margin: 20px 0px 0px 20px;
+}
+.carousel{
+	width: 500px;
+	display: inline;
+}
+main {
+	margin-top: 150px;
+	div {
+		ul {
+			li {
+				img {
+					margin: 0px 15px;
+				}
+			}
+		}
+	}
+}
 nav {
 	margin-bottom: 10px;
 	ul {
@@ -176,6 +180,22 @@ ul {
 }
 .row {
 	justify-content: space-evenly;
+}
+.imagenLista {
+	margin: 30px 30px 30px 30px;
+	display: inline-block;
+	font-family: $font-family_1;
+	font-weight: 600;
+	text-align: center;
+	font-size: 14px;
+	display: grid;
+	justify-items: center;
+	text-transform: uppercase;
+	justify-content: center;
+}
+.imagenCartas {
+	height: 250px;
+	width: 250px;
 }
 footer {
 	font-family: $font-family_1;
@@ -206,22 +226,7 @@ section {
 		}
 	}
 }
-.imagenLista {
-	margin: 30px 30px 30px 30px;
-	display: inline-block;
-	font-family: $font-family_1;
-	font-weight: 600;
-	text-align: center;
-	font-size: 14px;
-	display: grid;
-	justify-items: center;
-	text-transform: uppercase;
-	justify-content: center;
-}
-.imagenCartas {
-	height: 250px;
-	width: 250px;
-}
+
 .contactoMain {
 	display: grid;
 }
@@ -275,6 +280,14 @@ div {
 	h2 {
 		margin-top: 20px;
 		padding: 10px 0px 0px 0px;
+	}	
+	nav.row {
+		display: none;
+	}
+	header {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
 	}
 }
 @media screen and (min-width:768px) {
@@ -283,16 +296,6 @@ div {
 	}
 	.navbarLinks {
 		display: none;
-	}
-}
-@media screen and (max-width:768px) {
-	nav.row {
-		display: none;
-	}
-	header {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
 	}
 }
 @media screen and (min-width: 0px) and (max-width:1300px) {
@@ -325,4 +328,8 @@ div {
 	.contactoInfo {
 		margin: 30px 0px 0px 95px;
 	}
+	.d-block {
+	height: 650px;
+	}
 }
+
