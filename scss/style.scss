@@ -1,9 +1,10 @@
 $color_1: azure;
 $color_2: black;
-$font-family_1: Arial, Helvetica, sans-serif;
-$background-color_1: rgb(106, 9, 170);
+$font-family_1: 'Raleway', sans-serif;
+$background-color_1: rgb(91, 17, 141);
 $background-color_2: azure;
 $background-color_3: rgb(96, 102, 102);
+
 
 @keyframes XEROX {
 	0% {
@@ -179,6 +180,7 @@ ul {
 }
 .row {
 	justify-content: space-evenly;
+	box-sizing: content-box;
 }
 .imagenLista {
 	margin: 30px 30px 30px 30px;
@@ -225,7 +227,6 @@ section {
 		}
 	}
 }
-
 .contactoMain {
 	display: grid;
 }
@@ -256,6 +257,7 @@ section {
 	grid-template-columns: 1fr;
 	width: 600px;
 	grid-template-areas: "ul form";
+	box-sizing: border-box;
 }
 div {
 	ul {
@@ -276,7 +278,7 @@ div {
 	display: flex;
 }
 .banner{
-	padding: 2rem 0rem;
+	padding: 4rem 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,11 +288,42 @@ div {
     background-image:linear-gradient(
         rgba(5, 7, 12, 0.5),
         rgba(5, 7, 12, 0.5)),
-        url(../img/14caa8274fc227ae72a0ba394462db2f811e61e6.webp);
+        url(../img/marvel-banner.png);
     background-position: 50% 50%;
     background-size: cover;
     background-attachment: fixed;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+.banner1{
+	@extend .banner;
+	background-image:linear-gradient(
+        rgba(5, 7, 12, 0.5),
+        rgba(5, 7, 12, 0.5)),
+        url(../img/5265-SeriesHeaders_OP_2000x800_wm.jpg);
+	background-size: auto
+}
+.banner2{
+	@extend .banner;
+	background-image:linear-gradient(
+        rgba(5, 7, 12, 0.5),
+        rgba(5, 7, 12, 0.5)),
+        url(../img/0568794.webp);
+	background-size: auto;
+	background-position: 0% 30%
+}
+.banner3{
+	@extend .banner;
+	background-image:linear-gradient(
+        rgba(5, 7, 12, 0.5),
+        rgba(5, 7, 12, 0.5)),
+        url(../img/YuGiOh.jpg);
+
+
+}
+p{
+	font-size: 70px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: azure;
 }
 @media screen and (min-width:0px) and (max-width:768px) {
 	h2 {

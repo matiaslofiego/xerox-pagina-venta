@@ -22,8 +22,8 @@ h1 {
   font-size: 50px;
   font-weight: 550;
   padding: 20px 0px 0px 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(106, 9, 170);
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(91, 17, 141);
   margin-bottom: 0px;
 }
 h1 a {
@@ -39,13 +39,13 @@ h1 a {
 
 h2 {
   margin: 30px 30px 0px 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
 h3 {
   margin: 30px 30px 0px 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 17px;
 }
@@ -61,25 +61,25 @@ a {
 }
 
 header {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
   color: black;
-  background-color: rgb(106, 9, 170);
+  background-color: rgb(91, 17, 141);
   padding: 5px;
   display: grid;
 }
 
 .xeroxNav {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 19px;
   line-height: 25px;
-  background-color: rgb(106, 9, 170);
+  background-color: rgb(91, 17, 141);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -104,22 +104,22 @@ header {
 .divInicio {
   display: flex;
   align-content: center;
-  background-color: rgb(106, 9, 170);
+  background-color: rgb(91, 17, 141);
 }
 
 .navbarLinks {
-  background-color: rgb(106, 9, 170);
+  background-color: rgb(91, 17, 141);
   display: flex;
   flex-direction: column;
 }
 
 .xeroxNav1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 19px;
   line-height: 25px;
-  background-color: rgb(106, 9, 170);
+  background-color: rgb(91, 17, 141);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -178,12 +178,13 @@ ul {
 
 .row {
   justify-content: space-evenly;
+  box-sizing: content-box;
 }
 
 .imagenLista {
   margin: 30px 30px 30px 30px;
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
   text-align: center;
   font-size: 14px;
@@ -199,7 +200,7 @@ ul {
 }
 
 footer {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   margin-top: 110px;
   padding: 30px;
   color: azure;
@@ -231,7 +232,7 @@ section ul li img:hover {
 .contactoNav {
   margin: 30px 0px 0px 150px;
   padding: 20px 20px 20px 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 550;
   grid-area: ul;
 }
@@ -247,7 +248,7 @@ section ul li img:hover {
   margin: 30px 0px 0px 500px;
   border: 0ch;
   display: grid;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 550;
 }
 
@@ -258,6 +259,7 @@ section ul li img:hover {
   grid-template-columns: 1fr;
   width: 600px;
   grid-template-areas: "ul form";
+  box-sizing: border-box;
 }
 
 div ul li a {
@@ -275,19 +277,40 @@ div ul li img {
   display: flex;
 }
 
-.banner {
-  padding: 2rem 0rem;
+.banner, .banner3, .banner2, .banner1 {
+  padding: 4rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
   gap: 10px;
-  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/14caa8274fc227ae72a0ba394462db2f811e61e6.webp);
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/marvel-banner.png);
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+
+.banner1 {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/5265-SeriesHeaders_OP_2000x800_wm.jpg);
+  background-size: auto;
+}
+
+.banner2 {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/0568794.webp);
+  background-size: auto;
+  background-position: 0% 30%;
+}
+
+.banner3 {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/YuGiOh.jpg);
+}
+
+p {
+  font-size: 70px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: azure;
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
