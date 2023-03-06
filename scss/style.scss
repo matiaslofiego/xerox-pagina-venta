@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 $color_1: azure;
 $color_2: black;
-$font-family_1: 'Raleway', sans-serif;
+$font-family_1:'Ubuntu', sans-serif;
 $background-color_1: rgb(91, 17, 141);
 $background-color_2: azure;
 $background-color_3: rgb(96, 102, 102);
@@ -317,11 +318,9 @@ div {
         rgba(5, 7, 12, 0.5),
         rgba(5, 7, 12, 0.5)),
         url(../img/YuGiOh.jpg);
-
-
 }
 p{
-	font-size: 70px;
+	font-size: 50px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	color: azure;
 }
