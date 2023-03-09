@@ -1,4 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+main div.contactoDiv {
+  margin: 20px 0px 20px 0px;
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  width: 600px;
+  grid-template-areas: "ul form";
+  box-sizing: border-box;
+}
+main div.contactoDiv ul {
+  margin: 30px 0px 0px 150px;
+  padding: 20px 20px 20px 0px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 550;
+  grid-area: ul;
+}
+main div.contactoDiv ul li {
+  margin: 0px 0px 15px 0px;
+  display: grid;
+  grid-template-rows: 38px 5px;
+  grid-template-columns: 270px;
+}
+main div.contactoDiv ul li a {
+  color: black;
+}
+main div.contactoDiv ul li img {
+  width: 25px;
+  margin: 0px 15px;
+}
+main form fieldset {
+  margin: 30px 0px 0px 500px;
+  border: 0ch;
+  display: grid;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 550;
+}
+
+.comentarioDisplay {
+  display: flex;
+}
+
+.enviar {
+  display: flex;
+}
+
+.banner, .banner3, .banner2, .banner1 {
+  padding: 4rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/marvel-banner.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 2rem;
+}
+
+.banner1 {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/5265-SeriesHeaders_OP_2000x800_wm.jpg);
+  background-size: auto;
+}
+
+.banner2 {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/0568794.webp);
+  background-size: auto;
+  background-position: 0% 30%;
+}
+
+.banner3 {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/YuGiOh.jpg);
+}
+
+.imagenLista {
+  margin: 30px 30px 30px 30px;
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+  display: grid;
+  justify-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+.imagenLista .imagenCartas {
+  height: 250px;
+  width: 250px;
+}
+
 @keyframes XEROX {
   0% {
     border-radius: 40%;
@@ -18,7 +110,22 @@
   padding: 0%;
 }
 
-h1 {
+body {
+  background-color: azure;
+}
+body header {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: black;
+  background-color: rgb(91, 17, 141);
+  padding: 5px;
+  display: grid;
+}
+body header h1 {
   text-align: center;
   font-size: 50px;
   font-weight: 550;
@@ -27,14 +134,11 @@ h1 {
   background-color: rgb(91, 17, 141);
   margin-bottom: 0px;
 }
-h1 a {
+body header h1 a {
   color: azure;
-}
-
-.tituloXerox {
   padding: 13px;
 }
-.tituloXerox:hover {
+body header h1 a:hover {
   animation: XEROX 1s;
 }
 
@@ -56,25 +160,23 @@ h4 {
   font-weight: 700;
 }
 
+h5 {
+  color: azure;
+}
+
+p {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: azure;
+  text-shadow: 5ch;
+}
+
 a {
   list-style-type: none;
   text-decoration: none;
 }
 
-header {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: black;
-  background-color: rgb(91, 17, 141);
-  padding: 5px;
-  display: grid;
-}
-
-.xeroxNav {
+nav.row ul {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -87,18 +189,17 @@ header {
   margin-bottom: 0px;
   align-items: center;
 }
-
-.xeroxLista {
+nav.row ul .xeroxLista {
   display: inline-block;
   list-style: none;
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
   text-decoration: none;
   transition-property: all;
   transition-duration: 95ms;
   letter-spacing: 1px;
-  width: 160px;
+  width: 155px;
 }
-.xeroxLista:hover {
+nav.row ul .xeroxLista:hover {
   transform: scale(1.5);
 }
 
@@ -142,10 +243,6 @@ header {
   transform: scale(1.4);
 }
 
-body {
-  background-color: azure;
-}
-
 .breadcrumb {
   margin: 20px 0px 0px 20px;
 }
@@ -182,27 +279,9 @@ ul {
   box-sizing: content-box;
 }
 
-.imagenLista {
-  margin: 30px 30px 30px 30px;
-  display: inline-block;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  font-size: 14px;
-  display: grid;
-  justify-items: center;
-  text-transform: uppercase;
-  justify-content: center;
-}
-
-.imagenCartas {
-  height: 250px;
-  width: 250px;
-}
-
 footer {
   font-family: "Ubuntu", sans-serif;
-  margin-top: 110px;
+  margin-top: 60px;
   padding: 30px;
   color: azure;
   background-color: rgb(96, 102, 102);
@@ -226,95 +305,29 @@ section ul li img:hover {
   transform: scale(1.2);
 }
 
-.contactoMain {
-  display: grid;
+@media screen and (min-width: 0px) and (max-width: 1535px) {
+  fieldset {
+    margin: 30px 0px 0px 200px;
+  }
 }
-
-.contactoNav {
-  margin: 30px 0px 0px 150px;
-  padding: 20px 20px 20px 0px;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 550;
-  grid-area: ul;
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+  main {
+    justify-items: center;
+  }
+  main div.contactoDiv {
+    grid-template-columns: 60vw;
+    grid-template-rows: auto;
+    grid-template-areas: "ul" "form";
+  }
+  main div.contactoDiv ul {
+    margin: 30px 0px 0px 50px;
+    padding: 0px 0px 0px 120px;
+  }
+  main form fieldset {
+    margin: 30px 0px 0px 150px;
+  }
 }
-
-.contactoComentario {
-  margin: 0px 0px 15px 0px;
-  display: grid;
-  grid-template-rows: 38px 5px;
-  grid-template-columns: 270px;
-}
-
-.contactoInfo {
-  margin: 30px 0px 0px 500px;
-  border: 0ch;
-  display: grid;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 550;
-}
-
-.contactoDiv {
-  margin: 20px 0px 20px 0px;
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr;
-  width: 600px;
-  grid-template-areas: "ul form";
-  box-sizing: border-box;
-}
-
-div ul li a {
-  color: black;
-}
-div ul li img {
-  width: 25px;
-}
-
-.comentarioDisplay {
-  display: flex;
-}
-
-.enviar {
-  display: flex;
-}
-
-.banner, .banner3, .banner2, .banner1 {
-  padding: 4rem 0rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  gap: 10px;
-  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/marvel-banner.png);
-  background-position: 50% 50%;
-  background-size: cover;
-  background-attachment: fixed;
-  margin-bottom: 4rem;
-}
-
-.banner1 {
-  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/5265-SeriesHeaders_OP_2000x800_wm.jpg);
-  background-size: auto;
-}
-
-.banner2 {
-  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/0568794.webp);
-  background-size: auto;
-  background-position: 0% 30%;
-}
-
-.banner3 {
-  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/YuGiOh.jpg);
-}
-
-p {
-  font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: azure;
-}
-
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 822px) {
   h2 {
     margin-top: 20px;
     padding: 10px 0px 0px 0px;
@@ -330,8 +343,11 @@ p {
   .carousel {
     margin: 0px 50px 0px 50px;
   }
+  p {
+    font-size: 30px;
+  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 823px) {
   .divInicio {
     display: none;
   }
@@ -339,34 +355,12 @@ p {
     display: none;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 1300px) {
-  .contactoMain {
-    justify-items: center;
-  }
-  .contactoDiv {
-    grid-template-columns: 60vw;
-    grid-template-rows: auto;
-    grid-template-areas: "ul" "form";
-  }
-  .contactoNav {
-    margin: 30px 0px 0px 50px;
-    padding: 0px 0px 0px 120px;
-  }
-  .contactoInfo {
-    margin: 30px 0px 0px 150px;
-  }
-}
-@media screen and (min-width: 0px) and (max-width: 1535px) {
-  .contactoInfo {
-    margin: 30px 0px 0px 200px;
-  }
-}
 @media screen and (min-width: 0px) and (max-width: 576px) {
-  .contactoNav {
+  main div ul {
     margin: 30px 0px 0px 35px;
     padding: 5px 0px 0px 40px;
   }
-  .contactoInfo {
+  main div form fieldset {
     margin: 30px 0px 0px 95px;
   }
   .carousel {

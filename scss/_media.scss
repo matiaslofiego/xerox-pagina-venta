@@ -1,0 +1,74 @@
+@media screen and (min-width: 0px) and (max-width:1535px) {
+	fieldset {
+		margin: 30px 0px 0px 200px;
+	}
+}
+@media screen and (min-width: 0px) and (max-width:1300px) {
+	main {
+		justify-items: center;
+		div.contactoDiv{
+			grid-template-columns: 60vw;
+			grid-template-rows: auto;
+			grid-template-areas: "ul" "form";
+			ul {
+				margin: 30px 0px 0px 50px;
+				padding: 0px 0px 0px 120px;
+			}
+		}
+        form{
+            fieldset{
+                margin: 30px 0px 0px 150px;
+            }
+        }
+	}
+}
+@media screen and (min-width:0px) and (max-width:822px) {
+	h2 {
+		margin-top: 20px;
+		padding: 10px 0px 0px 0px;
+	}	
+	nav.row {
+		display: none;
+	}
+	header {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.carousel{
+		margin: 0px 50px 0px 50px;
+	}	
+	p{
+		font-size: 30px;
+	}
+}
+@media screen and (min-width:823px) {
+	.divInicio {
+		display: none;
+	}
+	.navbarLinks {
+		display: none;
+	}
+}
+@media screen and (min-width:0px) and (max-width:576px) {
+	main {
+		div{
+			ul{
+				margin: 30px 0px 0px 35px;
+				padding: 5px 0px 0px 40px;
+			}
+		}
+	}
+
+	main{
+        div{
+            form{
+                fieldset {
+                    margin: 30px 0px 0px 95px;
+                }
+            }
+        }
+    }.carousel{
+		margin: 0px;
+	}
+}
