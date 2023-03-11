@@ -20,6 +20,7 @@ main div.contactoDiv ul li {
   display: grid;
   grid-template-rows: 38px 5px;
   grid-template-columns: 270px;
+  align-items: center;
 }
 main div.contactoDiv ul li a {
   color: black;
@@ -35,12 +36,10 @@ main form fieldset {
   font-family: "Ubuntu", sans-serif;
   font-weight: 550;
 }
-
-.comentarioDisplay {
+main form fieldset div.contactoDiv label.comentario.Display {
   display: flex;
 }
-
-.enviar {
+main form fieldset div.enviar {
   display: flex;
 }
 
@@ -91,6 +90,81 @@ main form fieldset {
   width: 250px;
 }
 
+footer {
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 60px;
+  padding: 30px;
+  color: azure;
+  background-color: rgb(96, 102, 102);
+  display: flex;
+  flex-direction: column;
+}
+footer .footerRedes {
+  width: 30px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1535px) {
+  body main form fieldset {
+    margin: 30px 0px 0px 200px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+  body main {
+    justify-items: center;
+  }
+  body main div.contactoDiv {
+    grid-template-columns: 60vw;
+    grid-template-rows: auto;
+    grid-template-areas: "ul" "form";
+  }
+  body main div.contactoDiv ul {
+    margin: 30px 0px 0px 50px;
+    padding: 0px 0px 0px 120px;
+  }
+  body main form fieldset {
+    margin: 30px 0px 0px 150px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 822px) {
+  body header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  body header nav.row {
+    display: none;
+  }
+  body main section section p {
+    font-size: 30px;
+  }
+  body main section div.carousel {
+    margin: 0px 50px 0px 50px;
+  }
+  body main section h2 {
+    margin-top: 20px;
+    padding: 10px 0px 0px 0px;
+  }
+}
+@media screen and (min-width: 823px) {
+  body header nav.divInicio {
+    display: none;
+  }
+  body header div.navbarLinks {
+    display: none;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 576px) {
+  body main section div.carousel {
+    margin: 0px;
+  }
+  body main div.contactoDiv ul {
+    margin: 30px 0px 0px 35px;
+    padding: 5px 0px 0px 40px;
+  }
+  body main div.contactoDiv form fieldset {
+    margin: 30px 0px 0px 95px;
+  }
+}
 @keyframes XEROX {
   0% {
     border-radius: 40%;
@@ -141,42 +215,7 @@ body header h1 a {
 body header h1 a:hover {
   animation: XEROX 1s;
 }
-
-h2 {
-  margin: 30px 30px 0px 30px;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-}
-
-h3 {
-  margin: 30px 30px 0px 30px;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-}
-
-h4 {
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-h5 {
-  color: azure;
-}
-
-p {
-  font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: azure;
-  text-shadow: 5ch;
-}
-
-a {
-  list-style-type: none;
-  text-decoration: none;
-}
-
-nav.row ul {
+body header nav.row ul {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -189,7 +228,7 @@ nav.row ul {
   margin-bottom: 0px;
   align-items: center;
 }
-nav.row ul .xeroxLista {
+body header nav.row ul .xeroxLista {
   display: inline-block;
   list-style: none;
   padding: 10px 0px 10px 0px;
@@ -199,23 +238,20 @@ nav.row ul .xeroxLista {
   letter-spacing: 1px;
   width: 155px;
 }
-nav.row ul .xeroxLista:hover {
+body header nav.row ul .xeroxLista:hover {
   transform: scale(1.5);
 }
-
-.divInicio {
+body header nav.divInicio {
   display: flex;
   align-content: center;
   background-color: rgb(91, 17, 141);
 }
-
-.navbarLinks {
+body header div.navbarLinks {
   background-color: rgb(91, 17, 141);
   display: flex;
   flex-direction: column;
 }
-
-.xeroxNav1 {
+body header div.navbarLinks nav ul.xeroxNav1 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -229,8 +265,7 @@ nav.row ul .xeroxLista:hover {
   align-items: flex-start;
   align-content: flex-start;
 }
-
-.xeroxLista1 {
+body header div.navbarLinks nav ul.xeroxNav1 li.xeroxLista1 {
   display: inline-block;
   list-style: none;
   padding: 10px 10px 10px 30px;
@@ -239,27 +274,54 @@ nav.row ul .xeroxLista:hover {
   transition-duration: 95ms;
   letter-spacing: 1px;
 }
-.xeroxLista1:hover {
+body header div.navbarLinks nav ul.xeroxNav1 li.xeroxLista1:hover {
   transform: scale(1.4);
 }
-
-.breadcrumb {
-  margin: 20px 0px 0px 20px;
-}
-
-.carousel {
-  margin: 0px 100px 0px 100px;
-}
-
-main {
+body main {
   margin-top: 150px;
 }
-main div ul li img {
-  margin: 0px 15px;
+body main section nav {
+  margin-bottom: 10px;
+}
+body main section nav ol.breadcrumb {
+  margin: 20px 0px 0px 20px;
+}
+body main section nav ol.breadcrumb li {
+  text-decoration: none;
+}
+body main section div.carousel {
+  margin: 0px 100px 0px 100px;
+  height: 50%;
+}
+body main section div.carousel div.carousel-inner div h5 {
+  color: azure;
+}
+body main section h2 {
+  margin: 30px 30px 0px 30px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+body main section ul.row li img {
+  height: 300px;
+  width: 200px;
+  transition-duration: 95ms;
+}
+body main section ul.row li img:hover {
+  transform: scale(1.2);
+}
+body main section ul.row li h3 {
+  margin: 30px 30px 0px 30px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+}
+body main section ul.row li h4 {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-nav {
-  margin-bottom: 10px;
+nav ul {
+  padding-left: 0;
 }
 nav ul li a {
   text-decoration: none;
@@ -270,8 +332,15 @@ nav ol li a {
   color: black;
 }
 
-ul {
-  padding-left: 0;
+p {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: azure;
+}
+
+a {
+  list-style-type: none;
+  text-decoration: none;
 }
 
 .row {
@@ -279,92 +348,66 @@ ul {
   box-sizing: content-box;
 }
 
-footer {
-  font-family: "Ubuntu", sans-serif;
-  margin-top: 60px;
-  padding: 30px;
-  color: azure;
-  background-color: rgb(96, 102, 102);
-  display: flex;
-  flex-direction: column;
-}
-
-.footerRedes {
-  width: 30px;
-}
-
-section a {
-  text-decoration: none;
-}
-section ul li img {
-  height: 300px;
-  width: 200px;
-  transition-duration: 95ms;
-}
-section ul li img:hover {
-  transform: scale(1.2);
-}
-
 @media screen and (min-width: 0px) and (max-width: 1535px) {
-  fieldset {
+  body main form fieldset {
     margin: 30px 0px 0px 200px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 1300px) {
-  main {
+  body main {
     justify-items: center;
   }
-  main div.contactoDiv {
+  body main div.contactoDiv {
     grid-template-columns: 60vw;
     grid-template-rows: auto;
     grid-template-areas: "ul" "form";
   }
-  main div.contactoDiv ul {
+  body main div.contactoDiv ul {
     margin: 30px 0px 0px 50px;
     padding: 0px 0px 0px 120px;
   }
-  main form fieldset {
+  body main form fieldset {
     margin: 30px 0px 0px 150px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 822px) {
-  h2 {
-    margin-top: 20px;
-    padding: 10px 0px 0px 0px;
-  }
-  nav.row {
-    display: none;
-  }
-  header {
+  body header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .carousel {
+  body header nav.row {
+    display: none;
+  }
+  body main section div.carousel {
     margin: 0px 50px 0px 50px;
+  }
+  body main section h2 {
+    margin-top: 20px;
+    padding: 10px 0px 0px 0px;
   }
   p {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 823px) {
-  .divInicio {
+  body header nav.divInicio {
     display: none;
   }
-  .navbarLinks {
+  body header div.navbarLinks {
     display: none;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 576px) {
-  main div ul {
+  body main section div.carousel {
+    margin: 0px;
+  }
+  body main div.contactoDiv ul {
     margin: 30px 0px 0px 35px;
     padding: 5px 0px 0px 40px;
   }
-  main div form fieldset {
+  body main div.contactoDiv form fieldset {
     margin: 30px 0px 0px 95px;
-  }
-  .carousel {
-    margin: 0px;
   }
 }
 

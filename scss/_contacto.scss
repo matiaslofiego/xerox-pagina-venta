@@ -18,6 +18,7 @@ main {
 				display: grid;
 				grid-template-rows: 38px 5px;
 				grid-template-columns: 270px;
+				align-items: center;
 				a{
 					color: black;
 				}
@@ -35,12 +36,14 @@ main {
 			display: grid;
 			font-family: 'Ubuntu', sans-serif;
 			font-weight: 550;
+			div.contactoDiv{
+				label.comentario.Display{
+					display: flex;
+				}
+			}
+			div.enviar{
+				display: flex;
+			}
 		}
 	}
-}
-.comentarioDisplay {
-	display: flex;
-}
-.enviar {
-	display: flex;
 }
