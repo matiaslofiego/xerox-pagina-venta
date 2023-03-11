@@ -44,6 +44,7 @@ main form fieldset div.enviar {
 }
 main form fieldset div.enviar button {
   background-color: rgb(91, 17, 141);
+  border-color: black;
 }
 
 .banner, .banner3, .banner2, .banner1 {
@@ -160,7 +161,7 @@ body header h1 a {
   padding: 13px;
 }
 body header h1 a:hover {
-  animation: XEROX 1s;
+  animation: XEROX 1.1s;
 }
 body header nav.row ul {
   font-family: "Ubuntu", sans-serif;
