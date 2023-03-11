@@ -42,6 +42,9 @@ main form fieldset div.contactoDiv label.comentario.Display {
 main form fieldset div.enviar {
   display: flex;
 }
+main form fieldset div.enviar button {
+  background-color: rgb(91, 17, 141);
+}
 
 .banner, .banner3, .banner2, .banner1 {
   padding: 4rem 0rem;
@@ -355,6 +358,24 @@ a {
   body main section div.carousel div.carousel-inner div p {
     font-size: 20px;
   }
+  body main div.contactoDiv ul {
+    margin: 30px 0px 0px 110px;
+    padding: 5px 0px 0px 40px;
+  }
+  body main div.contactoDiv form fieldset {
+    margin: 30px 0px 0px 115px;
+  }
+}
+@media screen and (max-width: 450px) {
+  body main div.contactoDiv ul {
+    margin: 30px 0px 0px 55px;
+    padding: 5px 0px 0px 40px;
+  }
+  body main div.contactoDiv form fieldset {
+    margin: 30px 0px 0px 100px;
+  }
+}
+@media screen and (max-width: 380px) {
   body main div.contactoDiv ul {
     margin: 30px 0px 0px 25px;
     padding: 5px 0px 0px 40px;
