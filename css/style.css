@@ -139,12 +139,10 @@ body header {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 18px;
   line-height: 25px;
   text-align: center;
   color: black;
   background-color: rgb(91, 17, 141);
-  padding: 5px;
   display: grid;
   justify-content: center;
 }
@@ -152,13 +150,14 @@ body header h1 {
   text-align: center;
   font-size: 50px;
   font-weight: 550;
-  padding: 20px 0px 10px 0px;
+  padding: 20px 0px 5px 0px;
   font-family: "Ubuntu", sans-serif;
   background-color: rgb(91, 17, 141);
   margin-bottom: 0px;
 }
 body header h1 a {
   color: azure;
+  font-size: 60px;
   padding: 13px;
 }
 body header h1 a:hover {
@@ -185,6 +184,9 @@ body header nav.navbar div div.collapse ul li.xeroxLista {
   text-decoration: none;
   letter-spacing: 1px;
   width: 155px;
+}
+body header nav.navbar div div.collapse ul li.xeroxLista a {
+  font-size: 20px;
 }
 body header nav.navbar div div.collapse ul li.xeroxLista a:hover {
   transition-property: all;
@@ -293,7 +295,7 @@ a {
 }
 
 @media screen and (min-width: 0px) and (max-width: 1535px) {
-  body main form fieldset {
+  body main div.contactoDiv form fieldset {
     margin: 30px 0px 0px 200px;
   }
 }
@@ -310,7 +312,7 @@ a {
     margin: 30px 0px 0px 50px;
     padding: 0px 0px 0px 120px;
   }
-  body main form fieldset {
+  body main div.contactoDiv form fieldset {
     margin: 30px 0px 0px 150px;
   }
 }
@@ -376,7 +378,7 @@ a {
   body main section div.carousel {
     margin: 0px;
   }
-  body main section div.carousel div.carousel-inner div p {
+  body main section div.carousel div.carousel-inner div.carousel-item div p {
     font-size: 20px;
   }
   body main div.contactoDiv ul {
