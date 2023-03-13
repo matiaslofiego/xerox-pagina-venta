@@ -146,6 +146,7 @@ body header {
   background-color: rgb(91, 17, 141);
   padding: 5px;
   display: grid;
+  justify-content: center;
 }
 body header h1 {
   text-align: center;
@@ -163,7 +164,34 @@ body header h1 a {
 body header h1 a:hover {
   animation: XEROX 1.1s;
 }
-body header nav.row ul {
+body header nav.navbar div div.collapse ul {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 25px;
+  background-color: rgb(91, 17, 141);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-bottom: 0px;
+  width: 1400px;
+}
+body header nav.navbar div div.collapse ul li.xeroxLista {
+  display: grid;
+  list-style: none;
+  padding: 10px 0px 10px 0px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  width: 155px;
+}
+body header nav.navbar div div.collapse ul li.xeroxLista a:hover {
+  transition-property: all;
+  transition-duration: 95ms;
+  transform: scale(1.5);
+}
+body header nav.navbar div div.collapsing ul {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -174,9 +202,9 @@ body header nav.row ul {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 0px;
-  align-items: center;
+  align-items: flex-start;
 }
-body header nav.row ul .xeroxLista {
+body header nav.navbar div div.collapsing ul .xeroxLista {
   display: inline-block;
   list-style: none;
   padding: 10px 0px 10px 0px;
@@ -185,45 +213,10 @@ body header nav.row ul .xeroxLista {
   transition-duration: 95ms;
   letter-spacing: 1px;
   width: 155px;
+  display: flex;
 }
-body header nav.row ul .xeroxLista:hover {
+body header nav.navbar div div.collapsing ul .xeroxLista:hover {
   transform: scale(1.5);
-}
-body header nav.divInicio {
-  display: flex;
-  align-content: center;
-  background-color: rgb(91, 17, 141);
-}
-body header div.navbarLinks {
-  background-color: rgb(91, 17, 141);
-  display: flex;
-  flex-direction: column;
-}
-body header div.navbarLinks nav ul.xeroxNav1 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 19px;
-  line-height: 25px;
-  background-color: rgb(91, 17, 141);
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-bottom: 0px;
-  align-items: flex-start;
-  align-content: flex-start;
-}
-body header div.navbarLinks nav ul.xeroxNav1 li.xeroxLista1 {
-  display: inline-block;
-  list-style: none;
-  padding: 10px 10px 10px 30px;
-  text-decoration: none;
-  transition-property: all;
-  transition-duration: 95ms;
-  letter-spacing: 1px;
-}
-body header div.navbarLinks nav ul.xeroxNav1 li.xeroxLista1:hover {
-  transform: scale(1.4);
 }
 body main {
   margin-top: 150px;
@@ -232,7 +225,7 @@ body main section nav {
   margin-bottom: 10px;
 }
 body main section nav ol.breadcrumb {
-  margin: 20px 0px 0px 20px;
+  margin: 27px 0px 0px 20px;
 }
 body main section nav ol.breadcrumb li {
   text-decoration: none;
@@ -321,14 +314,40 @@ a {
     margin: 30px 0px 0px 150px;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 822px) {
+@media screen and (max-width: 1250px) {
+  body header nav.navbar div div.collapse ul {
+    width: 1100px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body header nav.navbar div div.collapse ul {
+    width: 900px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 909px) {
   body header {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
   }
-  body header nav.row {
-    display: none;
+  body header nav.navbar div button {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  body header nav.navbar div div.collapse ul {
+    display: grid;
+    justify-content: start;
+  }
+  body header nav.navbar div div.collapse ul li.xeroxLista {
+    display: grid;
+    justify-content: start;
+    padding-left: 30px;
+    width: 200px;
+  }
+  body header nav.navbar div div.collapsing ul li.xeroxLista {
+    justify-content: flex-start;
+    padding-left: 30px;
+    width: 200px;
   }
   body main section div.carousel {
     margin: 0px 50px 0px 50px;
@@ -344,12 +363,13 @@ a {
     font-size: 15px;
   }
 }
-@media screen and (min-width: 823px) {
-  body header nav.divInicio {
+@media screen and (min-width: 910px) {
+  body header nav.navbar div button {
     display: none;
   }
-  body header div.navbarLinks {
-    display: none;
+  body header nav.navbar div.collapse {
+    display: flex !important;
+    flex-basis: auto;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 576px) {
