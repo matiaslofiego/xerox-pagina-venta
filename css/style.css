@@ -204,7 +204,7 @@ body header nav.navbar div div.collapsing ul {
   margin-bottom: 0px;
   align-items: flex-start;
 }
-body header nav.navbar div div.collapsing ul .xeroxLista {
+body header nav.navbar div div.collapsing ul li.xeroxLista {
   display: inline-block;
   list-style: none;
   padding: 10px 0px 10px 0px;
@@ -215,7 +215,7 @@ body header nav.navbar div div.collapsing ul .xeroxLista {
   width: 155px;
   display: flex;
 }
-body header nav.navbar div div.collapsing ul .xeroxLista:hover {
+body header nav.navbar div div.collapsing ul li.xeroxLista:hover {
   transform: scale(1.5);
 }
 body main {

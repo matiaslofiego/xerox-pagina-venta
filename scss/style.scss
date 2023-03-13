@@ -83,15 +83,13 @@ body {
 							list-style: none;
 							padding: 10px 0px 10px 0px;
 							text-decoration: none;
-							
 							letter-spacing: 1px;
 							width: 155px;
-							
 							a{
-							&:hover {
-								transition-property: all;
-								transition-duration: 95ms;
-								transform: scale(1.5);
+								&:hover {
+									transition-property: all;
+									transition-duration: 95ms;
+									transform: scale(1.5);
 								}
 							}
 						}
@@ -110,7 +108,7 @@ body {
 						justify-content: space-evenly;
 						margin-bottom: 0px;
 						align-items: flex-start;
-						.xeroxLista {
+						li.xeroxLista {
 							display: inline-block;
 							list-style: none;
 							padding: 10px 0px 10px 0px;
