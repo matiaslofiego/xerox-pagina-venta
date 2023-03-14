@@ -217,51 +217,59 @@ body header nav.navbar div div.collapsing ul li.xeroxLista {
   width: 155px;
   display: flex;
 }
-body header nav.navbar div div.collapsing ul li.xeroxLista:hover {
+body header nav.navbar div div.collapsing ul li.xeroxLista a {
+  font-size: 20px;
+}
+body header nav.navbar div div.collapsing ul li.xeroxLista a:hover {
+  transition-property: all;
+  transition-duration: 95ms;
   transform: scale(1.5);
 }
 body main {
   margin-top: 150px;
 }
-body main section nav {
+body main section.sectionMain nav {
   margin-bottom: 10px;
 }
-body main section nav ol.breadcrumb {
+body main section.sectionMain nav ol.breadcrumb {
   margin: 27px 0px 0px 20px;
 }
-body main section nav ol.breadcrumb li {
+body main section.sectionMain nav ol.breadcrumb li {
   text-decoration: none;
 }
-body main section div.carousel {
-  margin: 0px 100px 0px 100px;
-  height: 50%;
+body main section.sectionMain div.carousel {
+  margin: 0px 150px 0px 150px;
+  height: 550px;
 }
-body main section div.carousel div.carousel-inner div h5 {
+body main section.sectionMain div.carousel div.carousel-inner div.carousel-item img {
+  height: 550px;
+}
+body main section.sectionMain div.carousel div.carousel-inner div.carousel-item div.carousel.caption h5 {
   color: azure;
 }
-body main section h2 {
+body main section.sectionMain h2 {
   margin: 30px 30px 0px 30px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
 }
-body main section ul.row {
+body main section.sectionMain ul.row {
   padding-left: 0rem;
 }
-body main section ul.row li img {
+body main section.sectionMain ul.row li img {
   height: 300px;
   width: 200px;
   transition-duration: 95ms;
 }
-body main section ul.row li img:hover {
+body main section.sectionMain ul.row li img:hover {
   transform: scale(1.2);
 }
-body main section ul.row li h3 {
+body main section.sectionMain ul.row li h3 {
   margin: 30px 30px 0px 30px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: 17px;
 }
-body main section ul.row li h4 {
+body main section.sectionMain ul.row li h4 {
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -325,6 +333,13 @@ a {
   body header nav.navbar div div.collapse ul {
     width: 900px;
   }
+  body main section.sectionMain div.carousel {
+    margin: 0px 100px 0px 100px;
+    height: 450px;
+  }
+  body main section.sectionMain div.carousel div.carousel-inner div.carousel-item img {
+    height: 450px;
+  }
 }
 @media screen and (min-width: 0px) and (max-width: 909px) {
   body header {
@@ -351,10 +366,14 @@ a {
     padding-left: 30px;
     width: 200px;
   }
-  body main section div.carousel {
+  body main section.sectionMain div.carousel {
     margin: 0px 50px 0px 50px;
+    height: 300px;
   }
-  body main section h2 {
+  body main section.sectionMain div.carousel div.carousel-inner div.carousel-item img {
+    height: 300px;
+  }
+  body main section.sectionMain h2 {
     margin-top: 20px;
     padding: 10px 0px 0px 0px;
   }
@@ -375,10 +394,14 @@ a {
   }
 }
 @media screen and (min-width: 0px) and (max-width: 576px) {
-  body main section div.carousel {
+  body main section.sectionMain div.carousel {
     margin: 0px;
+    height: 250px;
   }
-  body main section div.carousel div.carousel-inner div.carousel-item div p {
+  body main section.sectionMain div.carousel div.carousel-inner div.carousel-item img {
+    height: 250px;
+  }
+  body main section.sectionMain div.carousel div.carousel-inner div.carousel-item div p {
     font-size: 20px;
   }
   body main div.contactoDiv ul {

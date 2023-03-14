@@ -118,8 +118,13 @@ body {
 							letter-spacing: 1px;
 							width: 155px;
 							display: flex;
-							&:hover {
-								transform: scale(1.5);
+							a{
+								font-size: 20px;
+								&:hover {
+									transition-property: all;
+									transition-duration: 95ms;
+									transform: scale(1.5);
+								}
 							}
 						}
 					}
@@ -129,7 +134,7 @@ body {
 	}
 	main{
 		margin-top: 150px;
-		section{
+		section.sectionMain{
 			nav{
 				margin-bottom: 10px;
 				ol.breadcrumb{
@@ -140,12 +145,17 @@ body {
 				}
 			}
 			div.carousel{
-				margin: 0px 100px 0px 100px;
-				height: 50%;
+				margin: 0px 150px 0px 150px;
+				height:550px;
 				div.carousel-inner{
-					div{
-						h5{
-							color: azure;
+					div.carousel-item{
+						img{
+							height: 550px;
+						}
+						div.carousel.caption{
+							h5{
+								color: azure;
+							}
 						}
 					}
 				}
@@ -278,6 +288,21 @@ a {
 				}
 			}
 		}
+		main{
+			section.sectionMain{
+				div.carousel{
+					margin: 0px 100px 0px 100px;
+					height: 450px;
+					div.carousel-inner{
+						div.carousel-item{
+							img{
+								height: 450px;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 @media screen and (min-width:0px) and (max-width:909px) {
@@ -317,9 +342,17 @@ a {
 			}
 		}
 		main{
-			section{
+			section.sectionMain{
 				div.carousel{
 					margin: 0px 50px 0px 50px;
+					height: 300px;
+					div.carousel-inner{
+						div.carousel-item{
+							img{
+								height: 300px;
+							}
+						}
+					}
 				}
 				h2{
 					margin-top: 20px;
@@ -355,11 +388,15 @@ a {
 @media screen and (min-width:0px) and (max-width:576px) {
 	body{
 		main {
-			section{
+			section.sectionMain{
 				div.carousel{
 					margin: 0px;
+					height: 250px;
 					div.carousel-inner{
 						div.carousel-item{
+							img{
+								height: 250px;
+							}
                             div{
                                 p{
                                     font-size: 20px;
