@@ -7,8 +7,9 @@ footer {
     background-color: rgb(96, 102, 102);
     display: flex;
     flex-direction: column;
-    .footerRedes {
+    a.footerRedes {
         width: 30px;
+        height: 30px;
     }
 }
 

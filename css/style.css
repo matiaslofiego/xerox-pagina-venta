@@ -103,8 +103,9 @@ footer {
   display: flex;
   flex-direction: column;
 }
-footer .footerRedes {
+footer a.footerRedes {
   width: 30px;
+  height: 30px;
 }
 
 @keyframes XEROX {
