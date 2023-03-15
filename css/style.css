@@ -292,13 +292,23 @@ body main section.sectionMain div.carousel {
 body main section.sectionMain div.carousel div.carousel-inner div.carousel-item img {
   height: 550px;
 }
-body main section.sectionMain div.carousel div.carousel-inner div.carousel-item div.carousel.caption h5 {
+body main section.sectionMain div.carousel div.carousel-inner div.carousel-item div h5 {
+  color: azure;
+}
+body main section.sectionMain div.carousel div.carousel-inner div.carousel-item div p {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: azure;
 }
 body main section.sectionMain h2 {
   margin: 30px 30px 0px 30px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
+}
+body main section.sectionMain section p {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: azure;
 }
 body main section.sectionMain ul.row {
   padding-left: 0rem;
@@ -332,12 +342,6 @@ nav ul li a {
 }
 nav ol li a {
   color: black;
-}
-
-p {
-  font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: azure;
 }
 
 a {
@@ -446,11 +450,14 @@ a {
   body main section.sectionMain div.carousel div.carousel-inner div.carousel-item img {
     height: 300px;
   }
+  body main section.sectionMain div.carousel div.carousel-inner div.carousel-item div p {
+    font-size: 25px;
+  }
   body main section.sectionMain h2 {
     margin-top: 20px;
     padding: 10px 0px 0px 0px;
   }
-  p {
+  body main section.sectionMain section p {
     font-size: 25px;
   }
   h5 {
