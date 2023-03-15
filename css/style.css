@@ -177,14 +177,21 @@ body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu {
   background-color: rgb(91, 17, 141);
   margin: 0px;
   padding: 0px;
+  --bs-dropdown-min-width: 0rem;
 }
 body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu li.xeroxLista1 {
   display: grid;
   list-style: none;
-  padding: 10px 0px 10px 0px;
+  padding: 5px 0px 5px 0px;
+  margin: 0px;
   text-decoration: none;
   letter-spacing: 1px;
   width: 155px;
+}
+body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu li.xeroxLista1:hover {
+  transition-property: all;
+  transition-duration: 95ms;
+  background-color: azure;
 }
 body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu li.xeroxLista1 a {
   font-size: 15px;
@@ -193,7 +200,6 @@ body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu li.xeroxLi
 body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu li.xeroxLista1 a:hover {
   transition-property: all;
   transition-duration: 95ms;
-  transform: scale(1.2);
   color: black;
 }
 body header nav.navbar div div.collapse ul.navbar-nav {
@@ -230,6 +236,9 @@ body header nav.navbar div div.collapsing div.dropdown button.btn {
   font-weight: 600;
   letter-spacing: 1px;
   padding: 10px 0px 10px 30px;
+  margin: 0px;
+}
+body header nav.navbar div div.collapsing div.dropdown ul.dropdown-menu li.xeroxLista1 {
   margin: 0px;
 }
 body header nav.navbar div div.collapsing ul.navbar-nav {
