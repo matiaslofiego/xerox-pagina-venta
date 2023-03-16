@@ -31,10 +31,12 @@ main div.contactoDiv ul li img {
 }
 main form fieldset {
   margin: 30px 0px 0px 500px;
-  border: 0ch;
   display: grid;
   font-family: "Ubuntu", sans-serif;
   font-weight: 550;
+}
+main form fieldset div.contactoDiv {
+  --bs-border-color: rgb(91, 17, 141);
 }
 main form fieldset div.contactoDiv label.comentario.Display {
   display: flex;
