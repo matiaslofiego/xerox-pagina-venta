@@ -241,17 +241,18 @@ body {
 						h5{
 							color: azure;
 						}
-						button{
 							a{
 								color: azure;
 							}
-						}
 					}
 					img{
 						height: 450px;
 						width: 286px;
 					}
 					div.card-body{
+						h5{
+							text-transform: capitalize;
+						}
 						p{
 							margin-bottom: 20px;
 						}
@@ -262,19 +263,12 @@ body {
 							&:hover{
 								background-color: $background-color_2;
 								color: azure;
-							}
-							a{
-								color: black;
+								a{
+									color: black;
+								}
 							}
 						}
 					}
-				}
-			}
-			section{
-				p{
-					font-size: 50px;
-					font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-					color: azure;
 				}
 			}
 		}
@@ -480,16 +474,8 @@ a {
 					margin-top: 20px;
 					padding: 10px 0px 0px 0px;
 				}
-				section{
-					p{
-						font-size: 25px;
-					}
-				}
 			}
 		}
-	}
-	h5{
-		font-size: 15px;
 	}
 }
 @media screen and (min-width:910px) {

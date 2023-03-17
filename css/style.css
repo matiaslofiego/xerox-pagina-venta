@@ -328,12 +328,15 @@ body main section.sectionMain div.lista div.card:hover p {
 body main section.sectionMain div.lista div.card:hover h5 {
   color: azure;
 }
-body main section.sectionMain div.lista div.card:hover button a {
+body main section.sectionMain div.lista div.card:hover a {
   color: azure;
 }
 body main section.sectionMain div.lista div.card img {
   height: 450px;
   width: 286px;
+}
+body main section.sectionMain div.lista div.card div.card-body h5 {
+  text-transform: capitalize;
 }
 body main section.sectionMain div.lista div.card div.card-body p {
   margin-bottom: 20px;
@@ -347,13 +350,8 @@ body main section.sectionMain div.lista div.card div.card-body button:hover {
   background-color: azure;
   color: azure;
 }
-body main section.sectionMain div.lista div.card div.card-body button a {
+body main section.sectionMain div.lista div.card div.card-body button:hover a {
   color: black;
-}
-body main section.sectionMain section p {
-  font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: azure;
 }
 
 nav ul {
@@ -480,12 +478,6 @@ a {
   body main section.sectionMain h2 {
     margin-top: 20px;
     padding: 10px 0px 0px 0px;
-  }
-  body main section.sectionMain section p {
-    font-size: 25px;
-  }
-  h5 {
-    font-size: 15px;
   }
 }
 @media screen and (min-width: 910px) {
