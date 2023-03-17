@@ -251,7 +251,6 @@ body {
 								}
 							}
 						}
-
 					}
 					img{
 						height: 450px;
@@ -264,6 +263,14 @@ body {
 						p{
 							margin-bottom: 20px;
 							font-size: 15px;
+						}
+						a.btn{
+							background-color: $background-color_1;
+							border: 0;
+							&:hover{
+								background-color: $background-color_2;
+								color: black;
+							}
 						}
 						button.btn-outline-primary{
 							display: flex;

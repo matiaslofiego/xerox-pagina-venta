@@ -348,6 +348,14 @@ body main section.sectionMain div.lista div.card div.card-body p {
   margin-bottom: 20px;
   font-size: 15px;
 }
+body main section.sectionMain div.lista div.card div.card-body a.btn {
+  background-color: rgb(91, 17, 141);
+  border: 0;
+}
+body main section.sectionMain div.lista div.card div.card-body a.btn:hover {
+  background-color: azure;
+  color: black;
+}
 body main section.sectionMain div.lista div.card div.card-body button.btn-outline-primary {
   display: flex;
   margin-left: 95px;
