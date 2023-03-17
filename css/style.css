@@ -323,14 +323,19 @@ body main section.sectionMain div.lista div.card:hover {
   transition-duration: 95ms;
   background-color: rgb(91, 17, 141);
 }
-body main section.sectionMain div.lista div.card:hover p {
-  color: azure;
-}
 body main section.sectionMain div.lista div.card:hover h5 {
   color: azure;
 }
 body main section.sectionMain div.lista div.card:hover a {
   color: azure;
+}
+body main section.sectionMain div.lista div.card:hover div.collapse div.card {
+  background-color: azure;
+  transform: none;
+}
+body main section.sectionMain div.lista div.card:hover div.collapse div.card p {
+  background-color: azure;
+  transform: none;
 }
 body main section.sectionMain div.lista div.card img {
   height: 450px;
@@ -341,17 +346,18 @@ body main section.sectionMain div.lista div.card div.card-body h5 {
 }
 body main section.sectionMain div.lista div.card div.card-body p {
   margin-bottom: 20px;
+  font-size: 15px;
 }
-body main section.sectionMain div.lista div.card div.card-body button {
+body main section.sectionMain div.lista div.card div.card-body button.btn-outline-primary {
   display: flex;
   margin-left: 95px;
   border-width: 0;
 }
-body main section.sectionMain div.lista div.card div.card-body button:hover {
+body main section.sectionMain div.lista div.card div.card-body button.btn-outline-primary:hover {
   background-color: azure;
   color: azure;
 }
-body main section.sectionMain div.lista div.card div.card-body button:hover a {
+body main section.sectionMain div.lista div.card div.card-body button.btn-outline-primary:hover a {
   color: black;
 }
 body main section.sectionMain section.banner p, body main section.sectionMain .banner1 p, body main section.sectionMain .banner2 p, body main section.sectionMain .banner3 p {

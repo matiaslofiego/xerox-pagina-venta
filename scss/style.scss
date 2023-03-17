@@ -235,15 +235,23 @@ body {
 						transition-property: all;
 						transition-duration: 95ms;
 						background-color: $background-color_1;
-						p{
-							color: azure;
-						}
 						h5{
 							color: azure;
 						}
-							a{
-								color: azure;
+						a{
+							color: azure;
+						}
+						div.collapse{
+							div.card{
+								background-color: azure;
+								transform: none;
+								p{
+									background-color: azure;
+									transform: none;
+								}
 							}
+						}
+
 					}
 					img{
 						height: 450px;
@@ -255,8 +263,9 @@ body {
 						}
 						p{
 							margin-bottom: 20px;
+							font-size: 15px;
 						}
-						button{
+						button.btn-outline-primary{
 							display: flex;
 							margin-left: 95px;
 							border-width: 0;
@@ -548,7 +557,6 @@ a {
 				form{
 					fieldset {
 						margin: 30px 0px 0px 70px;
-
 					}
 				}
             }
