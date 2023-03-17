@@ -26,8 +26,8 @@ main div.contactoDiv ul li a {
   color: black;
 }
 main div.contactoDiv ul li img {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   margin: 0px 15px;
 }
 main form fieldset {
@@ -354,6 +354,13 @@ body main section.sectionMain div.lista div.card div.card-body button:hover {
 body main section.sectionMain div.lista div.card div.card-body button:hover a {
   color: black;
 }
+body main section.sectionMain section.banner p, body main section.sectionMain .banner1 p, body main section.sectionMain .banner2 p, body main section.sectionMain .banner3 p {
+  color: azure;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
 nav ul {
   padding-left: 0;
@@ -479,6 +486,9 @@ a {
   body main section.sectionMain h2 {
     margin-top: 20px;
     padding: 10px 0px 0px 0px;
+  }
+  body main section.sectionMain section.banner p, body main section.sectionMain .banner1 p, body main section.sectionMain .banner2 p, body main section.sectionMain .banner3 p {
+    font-size: 30px;
   }
 }
 @media screen and (min-width: 910px) {
