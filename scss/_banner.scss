@@ -39,3 +39,12 @@
         rgba(5, 7, 12, 0.5)),
         url(../img/YuGiOh.jpg);
 }
+section.banner, .banner1, .banner2, .banner3{
+        p{
+                color: azure;
+                font-family: 'Ubuntu', sans-serif;;
+                font-size: 40px;
+                font-weight: 600;
+                letter-spacing: 1px;
+        }
+}
