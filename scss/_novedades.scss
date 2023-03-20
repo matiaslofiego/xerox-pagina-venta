@@ -1,0 +1,34 @@
+div.lista1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+    margin: 0px 20px 0px 20px;
+    div.divLista{
+        margin: 20px 30px 40px 30px;
+        display: flex;
+        flex-direction: row;
+        img{
+            height: 450px;
+            width: 286px;
+        }
+    }
+    div.cartaLista{
+        img{
+            height: 300px;
+            width: 300px;
+        }
+    }
+    div.text-center{
+        border: 0;
+        div.card-body{
+            p{
+                font-size: 20px;
+                margin-top: 15px;
+            }
+            a{
+                background-color: rgb(91, 17, 141);
+                border: 0;
+            }
+        }
+    }
+}

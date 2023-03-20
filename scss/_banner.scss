@@ -39,7 +39,14 @@
         rgba(5, 7, 12, 0.5)),
         url(../img/YuGiOh.jpg);
 }
-section.banner, .banner1, .banner2, .banner3{
+.banner4{
+        @extend .banner;
+	background-image:linear-gradient(
+        rgba(5, 7, 12, 0.5),
+        rgba(5, 7, 12, 0.5)),
+        url(../img/YuGiOh.jpg);
+}
+section.banner, .banner1, .banner2, .banner3, .banner4{
         p{
                 color: azure;
                 font-family: 'Ubuntu', sans-serif;;

@@ -1,4 +1,4 @@
-@import "contacto", "banner", "listasProductos", "footer", "novedades";
+@import "contacto", "banner", "footer", "novedades";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
 $color_1: azure;
@@ -34,6 +34,7 @@ $background-color_3: rgb(96, 102, 102);
 }
 body {
 	background-color: $background-color_2;
+	font-family: 'Ubuntu';
 	header {
 		font-family: $font-family_1;
 		font-weight: 600;
@@ -258,8 +259,12 @@ body {
 						width: 286px;
 					}
 					div.card-body{
+						display: flex;
+						align-items: center;
+						flex-direction: column;
+						justify-content: flex-start;
 						h5{
-							text-transform: capitalize;
+							font-size: 1.20rem;
 						}
 						p{
 							font-size: 15px;
@@ -274,7 +279,6 @@ body {
 						}
 						button.btn-outline-primary{
 							display: flex;
-							margin-left: 95px;
 							border-width: 0;
 							&:hover{
 								background-color: $background-color_2;
@@ -287,6 +291,12 @@ body {
 						div.carDiv{
 							margin: 20px 30px 0px 30px;
 						}
+					}
+				}
+				div.cartaLista{
+					img{
+						height: 300px;
+						width: 286px;
 					}
 				}
 			}
@@ -490,6 +500,13 @@ a {
 				section.banner, .banner1, .banner2, .banner3{
 					p{
 						font-size: 30px;
+					}
+				}
+				div.lista1{
+					display: flex;
+					flex-direction: column;
+					div.divLista{
+						margin: 20px 30px 0px 30px;
 					}
 				}
 			}
