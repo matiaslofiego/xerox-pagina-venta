@@ -58,7 +58,7 @@ main form fieldset div.enviar button {
   text-align: center;
   justify-content: center;
   gap: 10px;
-  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/marvel-banner.jpg);
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/aso3e-zwyuf.avif);
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed;
@@ -77,7 +77,7 @@ main form fieldset div.enviar button {
 }
 
 .banner3 {
-  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/YuGiOh.jpg);
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/a0z7l-grlfm.avif);
 }
 
 .banner4 {
@@ -223,7 +223,6 @@ body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu li.xeroxLi
   display: grid;
   list-style: none;
   padding: 5px 0px 5px 0px;
-  margin: 0px;
   text-decoration: none;
   letter-spacing: 1px;
   width: 155px;
