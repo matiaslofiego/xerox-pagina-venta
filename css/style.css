@@ -119,7 +119,7 @@ div.lista1 {
   margin: 0px 20px 0px 20px;
 }
 div.lista1 div.divLista {
-  margin: 20px 30px 40px 30px;
+  margin: 20px 0px 40px 30px;
   display: flex;
   flex-direction: row;
 }
@@ -133,6 +133,7 @@ div.lista1 div.cartaLista img {
 }
 div.lista1 div.text-center {
   border: 0;
+  background-color: azure;
 }
 div.lista1 div.text-center div.card-body p {
   font-size: 20px;
