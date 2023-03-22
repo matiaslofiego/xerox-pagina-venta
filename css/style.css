@@ -97,7 +97,7 @@ section.banner p, .banner1 p, .banner2 p, .banner3 p, .banner4 p {
 footer {
   font-family: "Ubuntu", sans-serif;
   margin-top: 60px;
-  padding: 30px;
+  padding: 30px 30px 10px 30px;
   color: azure;
   background-color: rgb(96, 102, 102);
   display: flex;
@@ -110,6 +110,11 @@ footer a.footerRedes {
 footer a.footerRedes img {
   width: 30px;
   height: 30px;
+}
+footer p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 div.lista1 {
