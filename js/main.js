@@ -18,3 +18,4 @@ let gravedadXiva= GRAVEDAD * IVA;
 let nombreCompleto= nombre + apellido //concatenación de variables
 
 console.log("Buenos dias mandy");
+console.log(PI);
