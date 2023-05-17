@@ -200,16 +200,29 @@ function shop() {
             console.log("Compra cancelada");
             break;
         default:
+            break;
+    }
+}
+
+shop()
+for (let i = 0; i < 2; i++) {
+    let mensaje = prompt("Desea escojer otro producto? Presione Y para seguir, o presione N para terminar con la compra. Puede comprar un máximo de hasta 3 productos a la vez.")
+    switch (mensaje) {
+        case "N":
+        case "n":
+            console.log("Gracias por comprar.");
+            break;
+        case "Y":
+        case "y":
+            shop()
+            break;
+        default:
             console.log("Opción no válida");
             break;
     }
-    for (let i = 0; i < 3; i++) {
-        if (opcion != 0) {
-            continue
-        } else {
-            console.log("error");
-            break;
-        }
-    }
 }
+
+
+
+
 

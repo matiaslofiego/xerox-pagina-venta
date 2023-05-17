@@ -159,6 +159,9 @@ if (opcion == "1") {
 
 
 //funciones
+
+
+
 function saludar() {
     console.log("Buenos dias");
 }
@@ -192,7 +195,11 @@ function mostrar(mensaje) {
 sumar(12, 6)
 mostrar(resultado1)
 
+
+
 //return
+
+
 function suma1(n1, n2) {
     return n1 + n2
 }
@@ -227,9 +234,12 @@ let div= calcular(33, 29, "/")
 console.log(div);
 let error= calcular(22, 44, "o")
 console.log(error);
-*/
+
+
 
 //scope o ambito
+
+
 let nombre2="Dani"
 console.log(nombre2);
 
@@ -247,8 +257,319 @@ console.log(cambiarNombre("Pepe"));
 console.log(cambiarNombre("Pedro")); 
 
 //funcion flecha
-const cambiarNombre1= param => param;//return implicito
+
+
+const cambiarNombre1= (param) => param;//return implicito
 console.log(cambiarNombre1("Mati"));
 console.log(cambiarNombre1("Emi"));
 
+
+
 //objetos
+
+
+let nombre = "Matias"
+let tel = "121433445"
+let direc = "Bolivia 123"
+
+let nombre1 = "Gordo"
+let tel1 = "84332487"
+
+const contacto={
+    nombre: "Matias",
+    tel: "345345",
+    direccion: "Bolivia 123,"
+};
+console.log(contacto["nombre"]);
+
+const contacto1={
+    nombre: "Matias",
+    tel: "345345",
+    direccion: "Bolivia 123,"
+};
+console.log(contacto1.tel);
+console.table(contacto1)
+
+contacto["email"] = "momo@gmail.com"
+contacto.tel = "421313213"
+console.log(contacto);
+
+//metodos
+let mensaje = "Mamahuevo";
+function saludar(nombre) {
+    console.log(nombre);
+}
+saludar("Arturo")
+
+console.log(mensaje.length);
+console.log(mensaje.toLowerCase());
+console.log(mensaje.toUpperCase());
+
+
+
+//funcion constructora
+
+
+function Producto(nombre, marca, precio, stock) {
+    this.nombre_producto = nombre;
+    this.marca = marca;
+    this.precio = precio;
+    this.stock = stock;
+    this.vender = (cantidad) => {
+        this.stock = this.stock - cantidad;
+    }
+    this.mostrar = () => "Producto: " + this.nombre_producto + " Marca: " + this.marca + " Precio: " + this.precio + " Stock: " + this.stock;
+}
+
+
+
+//clase constructura
+
+
+class Producto{
+    constructor(nombre, marca, precio, stock){
+        this.nombre_producto = nombre;
+        this.marca = marca;
+        this.precio = precio;
+        this.stock = stock;
+    }
+    vender = (cantidad) => {
+        this.stock = this.stock - cantidad;
+    }
+    mostrar = () => "Producto: " + this.nombre_producto + " Marca: " + this.marca + " Precio: " + this.precio + " Stock: " + this.stock;
+}
+
+const producto1 = new Producto("arroz", "gallos", 450, 20); //instanciar un producto
+const producto2 = new Producto("fideos", "luchetti", 380, 35);
+
+console.log(producto1.nombre_producto);
+console.log(producto1.precio);
+console.log(producto2);
+
+console.log(producto1.stock);
+producto1.vender(5);
+producto1.vender(5);
+producto1.vender(5);
+producto1.vender(5);
+producto1.vender(5);
+console.log(producto1.stock);
+console.log(producto1.mostrar());
+
+
+
+//operador in
+
+
+console.log("nombre_producto" in producto1);
+console.log(producto1.nombre_producto);
+console.log("tel" in producto1)
+console.log("nombre_producto" in producto2);;
+
+//bucle for in
+for (const prop in producto1) {
+    console.log(prop + ": " + producto1[prop]);
+}
+
+
+
+//array
+
+
+const array= [1,2,3,4,5,6,7,78,];
+const nombres=["Juan", "Seba", "Iara", "German"];
+const booleanos=[true, false, false, true];
+
+console.log(array);
+console.log(nombres);
+console.log(booleanos);
+console.log(nombres[0]);
+array[3]="azucar";
+
+for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+}
+
+
+
+//metodos array
+
+//agregar elementos al final del array
+console.log(nombres);
+nombres.push("Juan Esteban")
+console.log(nombres);
+//unshift (agregar elementos al principio del array)
+nombres.unshift("Noelia")
+console.log(nombres);
+//pop (quitar elementos del final)
+nombres.pop();
+console.log(nombres);
+//shift (quitar elementos del inicio)
+nombres.shift();
+console.log(nombres);
+//splice (quitar elementos en el medio)
+nombres.splice(2,1)
+console.log(nombres);
+//concat (unir arrays)
+const conjunto = nombres.concat(booleanos)
+console.log(conjunto);
+//slice (copia una porcion del array)
+const tajada = nombres.slice(1,3)
+console.log(tajada);
+//indexOf
+console.log(nombres.indexOf("German"));
+console.log(nombres.indexOf("Mario"));
+//includes
+console.log(nombres.includes("German"));
+console.log(nombres.includes("Mario"));
+
+
+
+//arrays objetos
+
+
+const libro = {
+    nombre: "Harry Potter",
+    autor: "JKR",
+    precio: 7000,
+    stock: 30,
+};
+
+function Libro (nombre, autor, precio, stock) {
+    this.nombre = nombre;
+    this.autor = autor;
+    this.precio = precio;
+    this.stock = stock;
+}
+const libro1 = new Libro("El cuervo", "Edgar Allan Poe", 10000, 35);
+
+const libreria = [
+    libro,
+    {
+        nombre: "Steve Jobs",
+        autor: "Walter Isaacson",
+        precio: 15000,
+        stock: 10,
+    }
+];
+
+libreria.push(libro1)
+console.log(libreria);
+//recorrer array de objetos for of
+for (const libro of libreria) {
+    console.log(libro);
+    console.log(libro.nombre);
+    console.log(libro.autor);
+    console.log(libro.precio);
+    console.log(libro.stock);
+}
+
+const listaDeDeseos = [];
+
+console.log(listaDeDeseos);
+
+let limite = 2;
+do {
+    let nombre = prompt ("Ingresá nombre de libro")
+    let autor = prompt ("Ingresá nombre de autor")
+    let precio = prompt ("Ingresá precio de libro")
+    let cant = prompt ("Ingresá cantidad de libros")
+    listaDeDeseos.push(new Libro(nombre, autor, precio, cant))
+} while (listaDeDeseos.length != limite);
+
+
+//al pasarlo a funcion:
+
+function pedirLibros(arr, limit){
+    do {
+        let nombre = prompt ("Ingresá nombre de libro");
+        let autor = prompt ("Ingresá nombre de autor");
+        let precio = prompt ("Ingresá precio de libro");
+        let cant = prompt ("Ingresá cantidad de libros");
+        arr.push(new Libro(nombre, autor, precio, cant));
+    } while (arr.length != limit);
+}
+
+pedirLibros(listaDeDeseos, limite);
+
+console.log(listaDeDeseos);
+for (const libro of listaDeDeseos) {
+    console.log(libro.nombre);
+    console.log(libro.autor);
+    console.log(libro.precio);
+    console.log(libro.stock);
+}
+
+
+
+//metodo tradicional
+let total = 0;
+for (let i = 1; i <= 10; i++) {
+    total = total + i;
+}
+console.log(total);
+
+//abstracción
+function sumarRango(inicio, fin) {
+    let total = 0;
+    for (let i = inicio; i <= fin; i++) {
+        total = total + i;
+    }
+    return total;
+}
+let rango = sumarRango(1,10)
+console.log(rango);
+
+//retornar funciones
+function mayorQue(n) {
+    return (m) => m>n
+}
+
+let mayorQueDiez = mayorQue(10)
+console.log(mayorQueDiez(12));
+console.log(mayorQueDiez(8));
+*/
+
+function asignarOperacion(op) {
+    switch (op) {
+        case "+":
+            return (a, b) => a + b;
+    case "-":
+        return (a, b) => a - b;
+        default:
+            ()=> "Operador no válido"
+    }
+}
+
+let suma = asignarOperacion ("+");
+console.log(suma(1,2));
+console.log(suma(3, 234));
+
+let resta = asignarOperacion("-")
+console.log(resta(23, 4));
+
+//funciones por parámetro
+
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function porCadaUno(arr, fn) {
+    for (const elemento of arr) {
+        fn (elemento);
+    }
+}
+
+//porCadaUno(nums, alert)
+porCadaUno(nums, console.log)
+
+let triplicado =[]
+console.log(nums);
+console.log(triplicado);
+
+porCadaUno(nums, (el)=> {
+    triplicado.push(el*3)
+})
+console.log(triplicado);
+
+const triplicar =function (el){
+    triplicado.push(el*3);
+}
+porCadaUno(nums, triplicar)
