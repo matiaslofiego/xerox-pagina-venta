@@ -8,7 +8,7 @@ let HfwAndFifa = 18000
 let cartaPrecio = 15000
 
 function shop() {
-    let opcion= prompt("Ingrese una categoría. Para cancelar compra, pulse 0.\n1- Comics\n2- Mangas\n3- Videojuegos\n4- Juegos de Cartas");
+    let opcion = prompt("Ingrese una categoría. Para cancelar compra, pulse 0.\n1- Comics\n2- Mangas\n3- Videojuegos\n4- Juegos de Cartas");
     switch (opcion) {
         case "1":
         case "comic":
@@ -123,7 +123,6 @@ function shop() {
                 case "Elden ring":
                 case "Elden Ring":
                     console.log("Elegiste Elden Ring PS5 $" + ErGowAndTlou);
-                    console.log("Elegiste Elden Ring PS5");
                     break
                 case "2":
                 case "god of war":
@@ -132,21 +131,18 @@ function shop() {
                 case "God of war":
                 case "God of war ragnarok":
                     console.log("Elegiste God of War Ragnarok PS5 $" + ErGowAndTlou);
-                    console.log("Elegiste God of War Ragnarok PS5");
                     break
                 case "3":
                 case "horizon":
                 case "Horizon":
                 case "horizon forbidden west":
                     console.log("Elegiste Horizon Forbidden West PS4 $" + HfwAndFifa);
-                    console.log("Elegiste Horizon Forbidden West PS4");
                     break
                 case "4":
                 case "the last of us":
                 case "The last of us":
                 case "The last of us parte 1":
                     console.log("Elegiste The Last of Us Parte 1 PS5 $" + ErGowAndTlou);
-                    console.log("Elegiste The Last of Us Parte 1 PS5");
                     break
                 case "5":
                 case "fifa":
@@ -155,7 +151,7 @@ function shop() {
                 case "fifa 23":
                     console.log("Elegiste FIFA 23 PS4 $" + HfwAndFifa);
                     break;
-                case"0":
+                case "0":
                 case 0:
                     console.log("Compra cancelada");
                     break
@@ -172,9 +168,6 @@ function shop() {
         case "juego":
         case "juegos":
         case "juego de cartas":
-        case"juego":
-        case"juegos":
-        case"juego de cartas":
             let opcionCartas = prompt("Elegir producto a comprar. Para cancelar compra, pulse 0.\n1- Magic The Gathering - $15000\n2- YUGIOH Eternity Code - $15000\n3- Pokemon Card Game - $15000");
             switch (opcionCartas) {
                 case "1":
@@ -182,7 +175,7 @@ function shop() {
                 case "magic the gathering":
                 case "Magic":
                 case "Magic the gathering":
-                console.log("Elegiste Magic The Gathering $" + cartaPrecio);
+                    console.log("Elegiste Magic The Gathering $" + cartaPrecio);
                     break;
                 case "2":
                 case "yugioh":
@@ -197,7 +190,7 @@ function shop() {
                 case "Pokemon card game":
                     console.log("Elegiste Pokemon Card Game $" + cartaPrecio);
                     break;
-                case"0":
+                case "0":
                 case 0:
                     console.log("Compra cancelada");
                     break
@@ -206,29 +199,23 @@ function shop() {
                     break;
             }
             break
-        case "0":
-        case 0:
-            console.log("Compra cancelada");
-            break;
         default:
+            console.log("Opción no valida");
             break;
     }
 }
 
-shop()
-for (let i = 0; i < 2; i++) {
-    let mensaje = prompt("Desea escojer otro producto? Presione Y para seguir, o presione N para terminar con la compra. Puede comprar un máximo de hasta 3 productos a la vez.")
-    switch (mensaje) {
-        case "N":
-        case "n":
-            console.log("Gracias por comprar.");
-            break;
-        case "Y":
-        case "y":
-            shop()
-            break;
-        default:
-            console.log("Opción no válida");
-            break;
+let tienda = shop()
+
+while (tienda != "0") {
+    let mensaje = prompt("Dese agregar otro producto a la lista? Para volver a ver los productos, presione 1. Si desea comprar los productos seleccionados, presione 2. Si desea cancelar la compra, pulse 0.");
+    if (mensaje == "1") {
+        shop()
+    } else if (mensaje == "2"){
+        console.log("Gracias por comprar");
+        break;
+    } else if (mensaje == "0"){
+        console.log("Compra cancelada");
+        break;
     }
 }

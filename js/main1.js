@@ -114,7 +114,9 @@ for (let i = 0; i <= 10; i++){
     console.log(i);
 }
 
+
 //while
+
 let i = 0;
 while (i < 10){
     console.log (i);
@@ -135,7 +137,9 @@ while(producto != "0"){
 }
 console.log("Gracias por su compra");
 
+
 //do while
+
 let producto1=prompt("Ingresa un producto. Para salir, pulsa 0.")
 do {
     alert("Ingresaste el producto: " + producto1);
@@ -143,7 +147,9 @@ do {
 } while (producto1 != "0");
 alert("Gracias por su compra")
 
+
 //switch
+
 let opcion = prompt("Ingrese una opción\n1-Café\n2-Té\n3-Chocolate\n4-Agua");
 if (opcion == "1") {
     console.log("Seleccionaste Café");
@@ -527,7 +533,7 @@ function mayorQue(n) {
 let mayorQueDiez = mayorQue(10)
 console.log(mayorQueDiez(12));
 console.log(mayorQueDiez(8));
-*/
+
 
 function asignarOperacion(op) {
     switch (op) {
@@ -547,6 +553,7 @@ console.log(suma(3, 234));
 let resta = asignarOperacion("-")
 console.log(resta(23, 4));
 
+
 //funciones por parámetro
 
 let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -557,7 +564,7 @@ function porCadaUno(arr, fn) {
     }
 }
 
-//porCadaUno(nums, alert)
+porCadaUno(nums, alert)
 porCadaUno(nums, console.log)
 
 let triplicado =[]
@@ -573,3 +580,171 @@ const triplicar =function (el){
     triplicado.push(el*3);
 }
 porCadaUno(nums, triplicar)
+
+
+//for each
+
+const servicios = [
+    { id: 1, nombre:"Limpieza de cutis", precio: 1800},
+    { id: 2, nombre:"Masajes", precio: 1800},
+    { id: 3, nombre:"Mascarillas", precio: 1900},
+    { id: 4, nombre:"Manicura", precio: 2100},
+    { id: 5, nombre:"Electrodos", precio: 1500},
+]
+
+servicios.forEach((el)=> {
+  //  console.log((el.nombre));
+})
+
+
+//find
+
+let encontrado = servicios.find((el)=>{
+    return el.id == 1
+})
+console.log(encontrado);
+
+let encontrado1 = servicios.find((el)=>{
+    return el.nombre.includes ("Mascarillas")
+})
+console.log(encontrado1);
+
+//filter (devuelve un array con las coincidencias)
+
+let baratos = servicios.filter ((el)=>{
+    return el.precio <= 1800
+})
+console.log(baratos);
+
+
+//some
+
+let existe = servicios.some(el=>{
+    return el.nombre =="Electrodos"
+})
+console.log(existe);
+
+
+//map
+
+let nombreServicios = servicios.map (serv=>{
+    return serv.nombre
+})
+
+console.log(nombreServicios);
+
+const precioActualizado = servicios.map (serv =>{
+    return{
+        id :serv.id,
+        nombre: serv.nombre,
+        precio: serv.precio * 1.15,
+        img: serv.img,
+    }
+})
+
+console.log(precioActualizado);
+
+
+//reduce
+
+const totalInventario = servicios.reduce((acc, el)=>acc + el.precio, 0);
+
+console.log(totalInventario);
+
+
+//sort
+
+const copiaServicios = servicios;
+const nums =[1,4,7,2,-9,12]
+console.log(nums.sort((a,b)=> a - b));
+console.log(copiaServicios.sort((a,b)=>a.precio - b.precio));
+
+//ordenar alfabeticamente
+copiaServicios.sort((a,b)=>{
+    if (a.nombre < b.nombre) {
+        return 1;
+    }
+    if (a.nombre > b.nombre) {
+        return -1;
+    }
+    return 0;
+})
+console.log(copiaServicios);
+
+
+//math
+
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.max(1, 3, 4, 7, 8, 9, 8, 6, 5, 556, 54, Infinity));
+console.log(Math.min(1, 3, 4, 7, 8, 9, 8, 6, 5, 556, 54, Infinity));
+let pi = Math.PI;
+console.log(Math.ceil(pi));
+console.log(Math.floor(pi));
+console.log(Math.round(pi + 0.5));
+console.log(pi.toFixed(3));
+console.log(Math.sqrt(-1));
+console.log(Math.sqrt(6));
+
+function asignarOperacion(op) {
+    switch (op) {
+        case "+":
+            return (a, b) => a + b;
+        case "-":
+            return (a, b) => a - b;
+        case "*":
+            return (a, b) => a * b;
+        case "/":
+            return (a, b) => a / b;
+        case "raiz":
+            return (a) => Math.sqrt(a);
+        case "raiz3":
+            return (a) => Math.cbrt(a);
+        default:
+            return () => "Operador inválido";
+    }
+}
+
+const raizCuadrada = asignarOperacion("raiz");
+const raizCubica = asignarOperacion("raiz3")
+
+console.log(raizCuadrada(2));
+console.log(raizCuadrada(25));
+console.log(raizCubica(25));
+console.log(Math.random()*100);
+let random = Math.random ()*100
+console.log(Math.floor(random));
+
+function crearToken() {
+    const numeros = [0,1,2,3,4,5,6,7,8,9];
+    let token = ""
+    for (let i = 0; i < 6; i++) {
+        const random = Math.floor (Math.random ()*numeros.length);
+        token = token + numeros[random]
+    }
+    return token;
+}
+
+console.log(crearToken()); 
+
+
+//DATE
+
+const fecha = new Date()
+console.log(fecha);
+console.log(fecha.getFullYear());
+console.log(fecha.getMonth());
+console.log(fecha.getDate());
+console.log(fecha.toDateString());
+console.log(fecha.toLocaleString());
+console.log(fecha.toTimeString());
+*/
+
+const fecha = new Date()
+function calcularEstadia(ingreso, egreso) {
+    let fIngreso = new Date(ingreso).getTime();
+    let fEgreso = new Date(egreso).getTime();
+    let totalEstadia = (fEgreso - fIngreso)/86400000
+    return totalEstadia;
+}
+console.log("La cantidad de dias que el usuario se hospeda es: " + calcularEstadia("2023-12-24", "2023-12-31"));
