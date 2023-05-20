@@ -748,3 +748,9 @@ function calcularEstadia(ingreso, egreso) {
     return totalEstadia;
 }
 console.log("La cantidad de dias que el usuario se hospeda es: " + calcularEstadia("2023-12-24", "2023-12-31"));
+
+let fechaIngreso = prompt ("Ingresa la fecha de ingreso al hotel", "2023-01-01");
+let fechaEgreso = prompt ("Ingresa la fecha de egreso del hotel", "2023-01-01");
+console.log(fechaIngreso);
+console.log(fechaEgreso);
+console.log(calcularEstadia(fechaIngreso, fechaEgreso));

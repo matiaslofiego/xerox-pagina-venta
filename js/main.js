@@ -217,5 +217,7 @@ while (tienda != "0") {
     } else if (mensaje == "0"){
         console.log("Compra cancelada");
         break;
+    }else{
+        alert("Opción inválida");
     }
 }
