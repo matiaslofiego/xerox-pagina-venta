@@ -1,3 +1,4 @@
+/*
 class Producto {
     constructor(nombre, compañia, precio, stock) {
         this.nombre = nombre;
@@ -107,7 +108,7 @@ function info(item) {
 }
 
 function shop(op) {
-    let opcion = prompt("Ingrese una categoría. Para cancelar compra, pulse 0. Para ver información sobre los productos, pulse 10.\n1- Comics\n2- Mangas\n3- videojuego\n4- Juegos de Cartas");
+    let opcion = prompt("Ingrese una categoría. Para cancelar compra, pulse 0. Para ver información sobre los productos, pulse 10.\n1- Comics\n2- Mangas\n3-Videojuegos\n4- Juegos de Cartas");
     switch (opcion) {
         case "1":
         case "comic":
@@ -355,7 +356,7 @@ let tienda = shop()
 
 
 while (tienda !== "0") {
-    let mensaje = prompt("Dese agregar otro producto a la lista? Para volver a ver los productos, presione 1. Si desea comprar los productos seleccionados, presione 2. Si desea cancelar la compra, pulse 0.");
+    let mensaje = prompt("Desea agregar otro producto a la lista? Para volver a ver los productos, presione 1. Si desea comprar los productos seleccionados, presione 2. Si desea cancelar la compra, pulse 0.");
     if (mensaje == "1") {
         shop()
     } else if (mensaje == "2") {
@@ -368,16 +369,45 @@ while (tienda !== "0") {
         alert("Opción inválida");
     }
 }
-
-
-
-
-/*
-funciones
-variables
-bucles
-switch
-objetos
-arrays
-math
 */
+
+const inputs = document.querySelectorAll("input")
+const btnSearch = document.querySelector("#btnSearch")
+
+function buscarProducto(arr, filtro){
+    const encontrado = arr.find((el) => {
+        return el.nombre.includes(filtro)
+    });
+    return encontrado;
+}
+function filtrarProducto(arr, filtro){
+    const filtrado = arr.filter((el) => {
+        return el.nombre.includes(filtro);
+    })
+    return filtrado;
+}
+
+const producto = [
+    {id: 1, nombre: "the last of us parte 1", precio: 25000, img:"./img/the-last-of-us-parte-i-202261012304123_1.avif"},
+    {id: 2, nombre: "bleach remix #1", precio: 25000, img:"./img/bleachremix011-db5742e66babce6afa16730621958737-640-0.webp"},
+    {id: 3, nombre: "batman the Killing Joke", precio: 25000, img:"./img/batman_broma_asesina_deluxe_pvc.avif"},
+    {id: 4, nombre: "fifa 23", precio: 25000, img:"./img/a6ztg-774xi.avif"},
+    {id: 5, nombre: "death note #1", precio: 25000, img:"./img/a3ww7-n5hpx.avif"},
+]
+
+const inputSearch = inputs[0];
+const caja = document.querySelector(".caja")
+
+function crearHTML(el){
+    caja.innerHTML= `<div>
+    <img src ="./${el.img}" alt ="" class ="imgJs">
+    <h2 class ="textJs">${el.nombre}</h2>
+    <p class ="textJs">${el.precio}</p>
+    </div>`
+}
+
+btnSearch.addEventListener('click', ()=>{
+    const prod = buscarProducto(producto, inputSearch.value)
+    console.log(prod);
+    crearHTML(prod)
+})
