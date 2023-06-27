@@ -1,3 +1,4 @@
+/*
 class Producto {
     constructor(nombre, compañia, precio, stock) {
         this.nombre = nombre;
@@ -64,6 +65,7 @@ const cartas = [
 ]
 
 const productos = biblioteca.concat(mangas, videojuegos, cartas)
+
 
 
 function info(item) {
@@ -367,8 +369,68 @@ function repeat(op) {
     }
 }
 
-const inputs = document.querySelectorAll("input")
+const listaDeDeseos = document.querySelector(".btnShop")
+listaDeDeseos.addEventListener("click", () => {
+    shop()
+    repeat(1)
+})
+*/
+const producto = [{
+        id: 1,
+        nombre: "The Last of Us Parte 1",
+        precio: 25000,
+        img: "./img/the-last-of-us-parte-i-202261012304123_1.avif",
+        href: "./paginas/producto.html"
+    },
+    {
+        id: 2,
+        nombre: "Bleach Remix #1",
+        precio: 25000,
+        img: "./img/bleachremix011-db5742e66babce6afa16730621958737-640-0.webp",
+        href: "./paginas/producto1.html"
+    },
+    {
+        id: 3,
+        nombre: "Batman The Killing Joke",
+        precio: 25000,
+        img: "./img/batman_broma_asesina_deluxe_pvc.avif",
+        href: "./paginas/producto2.html",
+    },
+    {
+        id: 4,
+        nombre: "FIFA 23",
+        precio: 25000,
+        img: "./img/a6ztg-774xi.avif",
+        href: "./paginas/producto3.html",
+    },
+    {
+        id: 5,
+        nombre: "Death Note #1",
+        precio: 25000,
+        img: "./img/a3ww7-n5hpx.avif",
+        href: "./paginas/producto4.html",
+    },
+]
+
+const caja = document.querySelector(".caja")
 const btnSearch = document.querySelector("#btnSearch")
+const inputIngreso = document.querySelector("#ingreso")
+localStorage.setItem('products', JSON.stringify(producto))
+const arrProd = JSON.parse(localStorage.getItem('products'))
+let obj = arrProd[0]
+
+function crearHTML(el) {
+    caja.innerHTML = "";
+    let html = `<div class="divBusqueda">
+                    <img src ="${el.img}" alt ="${el.nombre}" class ="imgJs"></img>
+                    <h2 class ="textJs">${el.nombre}</h2>
+                    <p class ="textJs">$${el.precio}</p>
+                    <div class="divButton">
+                        <a href= "${el.href}"> Ver producto </a>
+                    </div>
+                </div>`
+    caja.innerHTML = html
+}
 
 function buscarProducto(arr, filtro) {
     const encontrado = arr.find((el) => {
@@ -377,41 +439,55 @@ function buscarProducto(arr, filtro) {
     return encontrado;
 }
 
-const producto = [{
-        id: 1,
-        nombre: "the last of us parte 1",
-        precio: 25000,
-        img: "./img/the-last-of-us-parte-i-202261012304123_1.avif"
-    },
-    {
-        id: 2,
-        nombre: "bleach remix #1",
-        precio: 25000,
-        img: "./img/bleachremix011-db5742e66babce6afa16730621958737-640-0.webp"
-    },
-    {
-        id: 3,
-        nombre: "batman the Killing Joke",
-        precio: 25000,
-        img: "./img/batman_broma_asesina_deluxe_pvc.avif"
-    },
-    {
-        id: 4,
-        nombre: "fifa 23",
-        precio: 25000,
-        img: "./img/a6ztg-774xi.avif"
-    },
-    {
-        id: 5,
-        nombre: "death note #1",
-        precio: 25000,
-        img: "./img/a3ww7-n5hpx.avif"
-    },
-]
+const buttonProducto = btnSearch.addEventListener("click", (e) => {
+    e.preventDefault();
+    const encontrar = buscarProducto(producto, inputIngreso.value)
+    crearHTML(encontrar)
+    if (inputIngreso.value == 0) {
+        crearHTML() = false
+    }
+})
 
-const listaDeDeseos = document.querySelector(".btnShop")
-listaDeDeseos.addEventListener("click", () => {
-    shop()
-    repeat(1)
-    console.log("Hiciste click");
+const carrito = document.querySelector(".btnShop")
+const listaProd = document.querySelector(".carritoUl")
+const carritoBtn = document.getElementsByClassName("carritoBtn")
+const idUno = producto[0]
+
+function nuevoHTML(el) {
+    listaProd.innerHTML = ""
+    let html = `<ul class="dropdown-item">  
+                    <img src = ${el.img} class= "imgJs"></img>
+                    <a>${el.nombre}</a>
+                </ul>`
+    listaProd.innerHTML = html
+}
+
+carritoBtn[0].addEventListener("click", (e)=>{
+    e.preventDefault();
+    
+    nuevoHTML(producto[0])
+})
+
+carritoBtn[1].addEventListener("click", (e)=>{
+    e.preventDefault();
+    
+    nuevoHTML(producto[1])
+})
+
+carritoBtn[2].addEventListener("click", (e)=>{
+    e.preventDefault();
+    
+    nuevoHTML(producto[2])
+})
+
+carritoBtn[3].addEventListener("click", (e)=>{
+    e.preventDefault();
+    
+    nuevoHTML(producto[3])
+})
+
+carritoBtn[4].addEventListener("click", (e)=>{
+    e.preventDefault();
+    
+    nuevoHTML(producto[4])
 })

@@ -149,6 +149,84 @@ div.lista1 div.text-center div.card-body a {
   border: 0;
 }
 
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+body section.form-login {
+  width: 400px;
+  height: 380px;
+  background-color: rgb(96, 102, 102);
+  margin: auto;
+  margin-top: 120px;
+  margin-bottom: 70px;
+  box-shadow: 7px 13px 37px #000;
+  padding: 20px 30px;
+  border-top: 4px solid rgb(91, 17, 141);
+}
+body section.form-login h5 {
+  margin: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  height: 40px;
+  border-bottom: 1px solid;
+  font-size: 20px;
+  color: white;
+}
+body section.form-login .controls {
+  width: 100%;
+  border: 1px solid;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background-color: white;
+}
+body section.form-login .buttons {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(91, 17, 141);
+  border: none;
+  color: white;
+  margin-bottom: 16px;
+}
+body section.form-login p {
+  height: 40px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+body section.form-login p a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border: 0px;
+}
+
+body main section.sectProducto {
+  display: flex;
+  justify-content: center;
+}
+body main section.sectProducto div {
+  display: flex;
+  align-items: center;
+}
+body main section.sectProducto div div.divProd {
+  display: flex;
+  margin-top: 100px;
+  background-color: rgb(91, 17, 141);
+  padding: 50px 50px 50px 100px;
+}
+body main section.sectProducto div div.divProd div.imgDiv {
+  width: 500px;
+  height: 700px;
+  margin-right: 50px;
+}
+body main section.sectProducto div div.divProd div.imgDiv img.imgProducto {
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+}
+body main section.sectProducto div div.divProd div.prodTitulo h2 {
+  color: white;
+}
+
 @keyframes XEROX {
   0% {
     border-radius: 0%;
@@ -189,7 +267,11 @@ body header {
   display: grid;
   justify-content: center;
 }
-body header h1 {
+body header div.divHeader {
+  display: flex;
+  justify-content: center;
+}
+body header div.divHeader h1 {
   text-align: center;
   font-size: 50px;
   font-weight: 550;
@@ -198,13 +280,54 @@ body header h1 {
   background-color: rgb(91, 17, 141);
   margin-bottom: 0px;
 }
-body header h1 a {
+body header div.divHeader h1 a {
   color: azure;
   font-size: 60px;
   padding: 13px;
 }
-body header h1 a:hover {
+body header div.divHeader h1 a:hover {
   animation: XEROX 1.1s;
+}
+body header div.divHeader nav.searcher {
+  color: rgb(91, 17, 141);
+  margin-top: 10px;
+  display: flex;
+}
+body header div.divHeader nav.searcher div {
+  display: flex;
+  flex-direction: column;
+}
+body header div.divHeader nav.searcher div form {
+  align-items: baseline;
+}
+body header div.divHeader nav.searcher div form .btnSearch {
+  background-color: azure;
+}
+body header div.divHeader nav.searcher div div.caja {
+  border-style: dashed;
+  position: absolute;
+  background-color: rgb(91, 17, 141);
+  margin-top: 39px;
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+}
+body header div.divHeader nav.searcher div div.caja div.divBusqueda {
+  border-color: black;
+  display: flex;
+  align-items: center;
+}
+body header div.divHeader nav.searcher div div.caja div.divBusqueda h2.textJs {
+  color: white;
+  margin-top: 15px;
+}
+body header div.divHeader nav.searcher div div.caja div.divBusqueda p.textJs {
+  color: white;
+  margin-bottom: 10px;
+}
+body header div.divHeader nav.searcher div div.caja div.divBusqueda div.divButton button.btnCart {
+  margin-bottom: 20px;
 }
 body header nav.navbar div div.collapse div.dropdown {
   margin-right: 20px;
@@ -246,6 +369,9 @@ body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu li.xeroxLi
   transition-duration: 95ms;
   color: black;
 }
+body header nav.navbar div div.collapse div.ajusteJs {
+  margin-left: 100px;
+}
 body header nav.navbar div div.collapse ul.navbar-nav {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
@@ -272,6 +398,17 @@ body header nav.navbar div div.collapse ul.navbar-nav li.xeroxLista a:hover {
   transition-property: all;
   transition-duration: 95ms;
   transform: scale(1.3);
+}
+body header nav.navbar div div.collapse button.btnShop {
+  border-radius: 20px;
+  margin-left: 50px;
+}
+body header nav.navbar div div.collapse div {
+  z-index: 1;
+}
+body header nav.navbar div div.collapse div div.carritoUl ul {
+  display: flex;
+  flex-direction: column;
 }
 body header nav.navbar div div.collapsing div.dropdown button.btn {
   background-color: rgb(91, 17, 141);
@@ -318,7 +455,7 @@ body header nav.navbar div div.collapsing ul.navbar-nav li.xeroxLista a:hover {
   transform: scale(1.5);
 }
 body main {
-  margin-top: 150px;
+  margin-top: 165px;
 }
 body main section.sectionMain nav {
   margin-bottom: 10px;
@@ -413,6 +550,14 @@ body main section.sectionMain div.lista div.divLista div.card-body button.btn-ou
 body main section.sectionMain div.lista div.divLista div.card-body button.btn-outline-primary:hover a {
   color: black;
 }
+body main section.sectionMain div.lista div.divLista div.card-body div button.carritoBtn {
+  background-color: rgb(91, 17, 141);
+  border: 0;
+}
+body main section.sectionMain div.lista div.divLista div.card-body div button.carritoBtn:hover {
+  background-color: azure;
+  color: black;
+}
 body main section.sectionMain div.lista div.divLista div.card-body div.carDiv {
   margin: 20px 30px 0px 30px;
   background-color: white;
@@ -444,6 +589,12 @@ a {
   box-sizing: content-box;
 }
 
+.imgJs {
+  height: 250px;
+  width: 175px;
+  margin-top: 30px;
+}
+
 @media screen and (min-width: 0px) and (max-width: 1535px) {
   body main div.contactoDiv form fieldset {
     margin: 30px 0px 0px 200px;
@@ -466,21 +617,7 @@ a {
     margin: 30px 0px 0px 150px;
   }
 }
-@media screen and (max-width: 1250px) {
-  body header nav.navbar div div.collapse div.dropdown button.btn {
-    background-color: rgb(91, 17, 141);
-  }
-  body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu {
-    background-color: rgb(91, 17, 141);
-  }
-}
 @media screen and (max-width: 1050px) {
-  body header nav.navbar div div.collapse div.dropdown button.btn {
-    background-color: rgb(91, 17, 141);
-  }
-  body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu {
-    background-color: rgb(91, 17, 141);
-  }
   body main section.sectionMain div.carousel {
     margin: 0px 100px 0px 100px;
     height: 450px;
@@ -494,17 +631,22 @@ a {
     display: flex;
     flex-direction: column;
   }
+  body header div.divHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body header div.divHeader nav.searcher div div.caja {
+    margin-top: 50px;
+  }
   body header nav.navbar div button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
   }
-  body header nav.navbar div div.collapse div.dropdown button.btn {
-    background-color: rgb(91, 17, 141);
-  }
-  body header nav.navbar div div.collapse div.dropdown ul.dropdown-menu {
-    background-color: rgb(91, 17, 141);
+  body header nav.navbar div div.collapse div.dropdown {
+    margin-left: 0px;
   }
   body header nav.navbar div div.collapse ul.navbar-nav {
     display: grid;
@@ -516,16 +658,19 @@ a {
     padding-left: 30px;
     width: 200px;
   }
-  body header nav.navbar div div.collapsing div.dropdown button.btn {
-    background-color: rgb(91, 17, 141);
-  }
-  body header nav.navbar div div.collapsing div.dropdown ul.dropdown-menu {
-    background-color: rgb(91, 17, 141);
+  body header nav.navbar div div.collapse button.btnShop {
+    margin-left: 0px;
   }
   body header nav.navbar div div.collapsing ul.navbar-nav li.xeroxLista {
     justify-content: flex-start;
     padding-left: 30px;
     width: 200px;
+  }
+  body header nav.navbar div div.collapsing button.btnShop {
+    border-radius: 20px;
+  }
+  body main {
+    margin-top: 217px;
   }
   body main section.sectionMain div.carousel {
     margin: 0px 50px 0px 50px;
@@ -541,7 +686,10 @@ a {
     margin-top: 20px;
     padding: 10px 0px 0px 0px;
   }
-  body main section.sectionMain section.banner p, body main section.sectionMain section.banner4 p, body main section.sectionMain .banner1 p, body main section.sectionMain .banner2 p, body main section.sectionMain .banner3 p {
+  body main section.sectionMain section.banner p, body main section.sectionMain section.banner4 p,
+  body main section.sectionMain .banner1 p,
+  body main section.sectionMain .banner2 p,
+  body main section.sectionMain .banner3 p {
     font-size: 30px;
   }
   body main section.sectionMain div.lista1 {
@@ -551,10 +699,19 @@ a {
   body main section.sectionMain div.lista1 div.divLista {
     margin: 20px 30px 0px 30px;
   }
+  body main section.sectProducto div {
+    flex-direction: column;
+  }
+  body main section.sectProducto div div.divProd div.prodTitulo {
+    margin-top: 80px;
+  }
 }
 @media screen and (min-width: 910px) {
   body header nav.navbar div button.navbar-toggler {
     display: none;
+  }
+  body header nav.navbar div div.divHeader nav.searcher div div.caja {
+    margin-top: 50px;
   }
   body header nav.navbar div.collapse {
     display: flex !important;
@@ -563,12 +720,6 @@ a {
   }
   body header nav.navbar div.collapse div.dropdown {
     border-style: none;
-  }
-  body header nav.navbar div.collapse div.dropdown button.btn {
-    background-color: rgb(91, 17, 141);
-  }
-  body header nav.navbar div.collapse div.dropdown ul.dropdown-menu {
-    background-color: rgb(91, 17, 141);
   }
 }
 @media screen and (min-width: 0px) and (max-width: 576px) {

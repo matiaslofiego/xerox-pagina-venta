@@ -1,0 +1,43 @@
+$color_1: azure;
+$color_2: black;
+$font-family_1:'Ubuntu',
+sans-serif;
+$background-color_1: rgb(91, 17, 141);
+$background-color_2: azure;
+$background-color_3: rgb(96, 102, 102);
+
+body {
+    main {
+        section.sectProducto {
+            display: flex;
+            justify-content: center;
+            div {
+                display: flex;
+                align-items: center;
+                div.divProd {
+                    display: flex;
+                    margin-top: 100px;
+                    background-color: $background-color_1;
+                    padding: 50px 50px 50px 100px;
+
+                    div.imgDiv {
+                        width: 500px;
+                        height: 700px;
+                        margin-right: 50px;
+
+                        img.imgProducto {
+                            height: 100%;
+                            width: 100%;
+                            margin-top: 40px;
+                        }
+                    }
+                    div.prodTitulo{
+                        h2{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

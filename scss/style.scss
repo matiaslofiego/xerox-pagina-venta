@@ -1,4 +1,4 @@
-@import "contacto", "banner", "footer", "novedades";
+@import "contacto", "banner", "footer", "novedades", "registro", "prodDescrip";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
 $color_1: azure;
@@ -55,22 +55,79 @@ body {
 		display: grid;
 		justify-content: center;
 
-		h1 {
-			text-align: center;
-			font-size: 50px;
-			font-weight: 550;
-			padding: 20px 0px 5px 0px;
-			font-family: $font-family_1;
-			background-color: $background-color_1;
-			margin-bottom: 0px;
+		div.divHeader {
+			display: flex;
+			justify-content: center;
 
-			a {
-				color: $color_1;
-				font-size: 60px;
-				padding: 13px;
+			h1 {
+				text-align: center;
+				font-size: 50px;
+				font-weight: 550;
+				padding: 20px 0px 5px 0px;
+				font-family: $font-family_1;
+				background-color: $background-color_1;
+				margin-bottom: 0px;
 
-				&:hover {
-					animation: XEROX 1.1s;
+				a {
+					color: $color_1;
+					font-size: 60px;
+					padding: 13px;
+
+					&:hover {
+						animation: XEROX 1.1s;
+					}
+				}
+			}
+
+			nav.searcher {
+				color: $background-color_1;
+				margin-top: 10px;
+				display: flex;
+
+				div {
+					display: flex;
+					flex-direction: column;
+
+					form {
+						align-items: baseline;
+
+						.btnSearch {
+							background-color: azure;
+						}
+					}
+
+					div.caja {
+						border-style: dashed;
+						position: absolute;
+						background-color: $background-color_1;
+						margin-top: 39px;
+						z-index: 1;
+						border-bottom-left-radius: 20px;
+						border-bottom-right-radius: 20px;
+						width: 100%;
+
+						div.divBusqueda {
+							border-color: black;
+							display: flex;
+							align-items: center;
+
+							h2.textJs {
+								color: white;
+								margin-top: 15px;
+							}
+
+							p.textJs {
+								color: white;
+								margin-bottom: 10px;
+							}
+
+							div.divButton {
+								button.btnCart {
+									margin-bottom: 20px;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -80,7 +137,6 @@ body {
 				div.collapse {
 					div.dropdown {
 						margin-right: 20px;
-						margin-left: 400px;
 
 						button.btn {
 							background-color: $background-color_1;
@@ -126,6 +182,10 @@ body {
 						}
 					}
 
+					div.ajusteJs {
+						margin-left: 100px;
+					}
+
 					ul.navbar-nav {
 						font-family: $font-family_1;
 						font-weight: 600;
@@ -156,9 +216,19 @@ body {
 							}
 						}
 					}
-					button.btnShop{
-						margin-left: 350px;
+
+					button.btnShop {
 						border-radius: 20px;
+						margin-left: 50px;
+					}
+					div{
+						z-index: 1;
+						div.carritoUl{
+							ul{
+								display: flex;
+								flex-direction: column;
+							}
+						}
 					}
 				}
 
@@ -222,7 +292,7 @@ body {
 	}
 
 	main {
-		margin-top: 150px;
+		margin-top: 165px;
 
 		section.sectionMain {
 			nav {
@@ -346,6 +416,16 @@ body {
 								}
 							}
 						}
+						div{
+							button.carritoBtn{
+								background-color: $background-color_1;
+								border: 0;
+								&:hover{
+									background-color: $background-color_2;
+									color: black;
+								}
+							}
+						}
 
 						div.carDiv {
 							margin: 20px 30px 0px 30px;
@@ -403,10 +483,6 @@ a {
 	margin-top: 30px;
 }
 
-.textJs {
-	color: white;
-}
-
 @media screen and (min-width: 0px) and (max-width:1535px) {
 	body {
 		main {
@@ -446,47 +522,8 @@ a {
 	}
 }
 
-@media screen and (max-width:1250px) {
-	body {
-		header {
-			nav.navbar {
-				div {
-					div.collapse {
-						div.dropdown {
-							button.btn {
-								background-color: $background-color_1;
-							}
-
-							ul.dropdown-menu {
-								background-color: $background-color_1;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 @media screen and (max-width:1050px) {
 	body {
-		header {
-			nav.navbar {
-				div {
-					div.collapse {
-						div.dropdown {
-							button.btn {
-								background-color: $background-color_1;
-							}
-
-							ul.dropdown-menu {
-								background-color: $background-color_1;
-							}
-						}
-					}
-				}
-			}
-		}
 
 		main {
 			section.sectionMain {
@@ -513,6 +550,20 @@ a {
 			display: flex;
 			flex-direction: column;
 
+			div.divHeader {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				nav.searcher {
+					div {
+						div.caja {
+							margin-top: 50px;
+						}
+					}
+				}
+			}
+
 			nav.navbar {
 				div {
 					button {
@@ -525,13 +576,6 @@ a {
 					div.collapse {
 						div.dropdown {
 							margin-left: 0px;
-							button.btn {
-								background-color: $background-color_1;
-							}
-
-							ul.dropdown-menu {
-								background-color: $background-color_1;
-							}
 						}
 
 						ul.navbar-nav {
@@ -545,22 +589,13 @@ a {
 								width: 200px;
 							}
 						}
-						button.btnShop{
+
+						button.btnShop {
 							margin-left: 0px;
 						}
 					}
 
 					div.collapsing {
-						div.dropdown {
-							button.btn {
-								background-color: $background-color_1;
-							}
-
-							ul.dropdown-menu {
-								background-color: $background-color_1;
-							}
-						}
-
 						ul.navbar-nav {
 							li.xeroxLista {
 								justify-content: flex-start;
@@ -569,7 +604,7 @@ a {
 							}
 						}
 
-						button.btnShop{
+						button.btnShop {
 							border-radius: 20px;
 						}
 					}
@@ -578,6 +613,8 @@ a {
 		}
 
 		main {
+			margin-top: 217px;
+
 			section.sectionMain {
 				div.carousel {
 					margin: 0px 50px 0px 50px;
@@ -621,6 +658,18 @@ a {
 					}
 				}
 			}
+
+			section.sectProducto {
+
+				div {
+					flex-direction: column;
+					div.divProd {
+						div.prodTitulo {
+							margin-top: 80px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -633,6 +682,16 @@ a {
 					button.navbar-toggler {
 						display: none;
 					}
+
+					div.divHeader {
+						nav.searcher {
+							div {
+								div.caja {
+									margin-top: 50px;
+								}
+							}
+						}
+					}
 				}
 
 				div.collapse {
@@ -642,14 +701,6 @@ a {
 
 					div.dropdown {
 						border-style: none;
-
-						button.btn {
-							background-color: $background-color_1;
-						}
-
-						ul.dropdown-menu {
-							background-color: $background-color_1;
-						}
 					}
 				}
 			}

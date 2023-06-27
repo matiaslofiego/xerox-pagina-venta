@@ -15,56 +15,79 @@
 
 <body>
     <header class="container-fluid fixed-top">
-        <h1>
-            <a href="./index.html" class="tituloXerox" id="xerox">
-                XEROX
-            </a>
-        </h1>
+        <div>
+            <div class="divHeader">
+                <h1>
+                    <a href="./index.html" class="tituloXerox" id="xerox">
+                        XEROX
+                    </a>
+                </h1>
+                <nav class="navbar searcher">
+                    <div class="container-fluid ">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2 " id="ingreso" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn btnSearch" id="btnSearch" type="submit">Search</button>
+                        </form>
+                        <div class="caja dropdown"></div>
+                    </div>
+                </nav>
+            </div>
 
-        <nav class="navbar">
-            <div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse" id="navbarSupportedContent">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            CATEGORÍAS
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="xeroxLista1 col-lg-2 col-md-3 col-sm-4">
-                                <a class="dropdown-item " href="./paginas/comics.html">COMICS</a>
+            <nav class="navbar">
+                <div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse" id="navbarSupportedContent">
+                        <div class="dropdown ajusteJs">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                CATEGORÍAS
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="xeroxLista1 col-lg-2 col-md-3 col-sm-4">
+                                    <a class="dropdown-item " href="./paginas/comics.html">COMICS</a>
+                                </li>
+                                <li class="xeroxLista1 col-lg-2 col-md-3 col-sm-4">
+                                    <a class="dropdown-item" href="./paginas/manga.html">MANGAS</a>
+                                </li>
+                                <li class="xeroxLista1 col-lg-2 col-md-3 col-sm-4">
+                                    <a class="dropdown-item" href="./paginas/videojuegos.html">VIDEOJUEGOS</a>
+                                </li>
+                                <li class="xeroxLista1 col-lg-2 col-md-3 col-sm-4">
+                                    <a class="dropdown-item" href="./paginas/juegosdecartas.html">CARTAS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="navbar-nav me-auto">
+                            <li class="xeroxLista col-lg-2 col-md-3 col-sm-4">
+                                <a href="./paginas/novedades.html">NOVEDADES</a>
                             </li>
-                            <li class="xeroxLista1 col-lg-2 col-md-3 col-sm-4">
-                                <a class="dropdown-item" href="./paginas/manga.html">MANGAS</a>
+                            <li class="xeroxLista col-lg-2 col-md-3 col-sm-4">
+                                <a href="./paginas/contactos.html">CONTACTOS</a>
                             </li>
-                            <li class="xeroxLista1 col-lg-2 col-md-3 col-sm-4">
-                                <a class="dropdown-item" href="./paginas/videojuegos.html">VIDEOJUEGOS</a>
-                            </li>
-                            <li class="xeroxLista1 col-lg-2 col-md-3 col-sm-4">
-                                <a class="dropdown-item" href="./paginas/juegosdecartas.html">CARTAS</a>
+                            <li class="xeroxLista col-lg-2 col-md-3 col-sm-4">
+                                <a href="./paginas/registro.html">REGISTRARSE</a>
                             </li>
                         </ul>
+                        <div class="dropdown ">
+                            <button class="btn btn-secondary dropdown-toggle btnShop" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./img/icons8-carrito-de-compras-48.svg" alt="">
+                            </button>
+                            <div class="dropdown">
+                                <div class="dropdown-menu carritoUl">
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="navbar-nav me-auto">
-                        <li class="xeroxLista col-lg-2 col-md-3 col-sm-4">
-                            <a href="./paginas/novedades.html">NOVEDADES</a>
-                        </li>
-                        <li class="xeroxLista col-lg-2 col-md-3 col-sm-4">
-                            <a href="./paginas/contactos.html">CONTACTOS</a>
-                        </li>
-                    </ul>
-                    <button class="btnShop" >
-                        <img src="./img/icons8-carrito-de-compras-48.svg" alt="">
-                    </button>
                 </div>
-                
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main class="overflow-hidden">
@@ -132,10 +155,15 @@
                         alt="the last of us portada">
                     <div class="card-body">
                         <h5 class="card-title">The Last of Us Parte 1</h5>
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            Leer info.
-                        </a>
+                        <div>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Leer info.
+                            </a>
+                            <button class="btn btn-primary carritoBtn" role="button" type="submit">
+                                Agregar al carrito
+                            </button>
+                        </div>
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body carDiv">
                                 <p class="card-text" style="max-width: 300px;">
@@ -156,10 +184,15 @@
                         alt="bleach portada">
                     <div class="card-body">
                         <h5 class="card-title">Bleach Remix #1</h5>
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            Leer info.
-                        </a>
+                        <div>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Leer info.
+                            </a>
+                            <button class="btn btn-primary carritoBtn" role="button" type="submit">
+                                Agregar al carrito
+                            </button>
+                        </div>
                         <div class="collapse" id="collapseExample1">
                             <div class="card card-body carDiv">
                                 <p class="card-text" style="max-width: 300px;">
@@ -179,10 +212,15 @@
                     <img src="./img/batman_broma_asesina_deluxe_pvc.avif" class="card-img-top" alt="batman portada">
                     <div class="card-body">
                         <h5 class="card-title">Batman The Killing Joke</h5>
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            Leer info.
-                        </a>
+                        <div>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Leer info.
+                            </a>
+                            <button class="btn btn-primary carritoBtn" role="button" type="submit">
+                                Agregar al carrito
+                            </button>
+                        </div>
                         <div class="collapse" id="collapseExample2">
                             <div class="card card-body carDiv">
                                 <p class="card-text" style="max-width: 300px;">
@@ -203,10 +241,15 @@
                     <img src="./img/a6ztg-774xi.avif" class="card-img-top" alt="fifa 23 portada">
                     <div class="card-body">
                         <h5 class="card-title">FIFA 23</h5>
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            Leer info.
-                        </a>
+                        <div>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Leer info.
+                            </a>
+                            <button class="btn btn-primary carritoBtn" role="button" type="submit">
+                                Agregar al carrito
+                            </button>
+                        </div>
                         <div class="collapse" id="collapseExample3">
                             <div class="card card-body carDiv">
                                 <p class="card-text" style="max-width: 300px;">
@@ -226,10 +269,15 @@
                     <img src="./img/a3ww7-n5hpx.avif" class="card-img-top" alt="death note portada">
                     <div class="card-body">
                         <h5 class="card-title">Death Note #10</h5>
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample4" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            Leer info.
-                        </a>
+                        <div>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample4" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Leer info.
+                            </a>
+                            <button class="btn btn-primary carritoBtn" role="button" type="submit">
+                                Agregar al carrito
+                            </button>
+                        </div>
                         <div class="collapse" id="collapseExample4">
                             <div class="card card-body carDiv">
                                 <p class="card-text" style="max-width: 300px;">
