@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/sweetalert.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <meta name="description"
         content="XEROX es una página dedicada a la venta de los mejores comics, mangas, videojuegos y más. Encontrá las mejores ofertas y precios para tus productos favoritos. Envios a todo el país.">
@@ -13,7 +14,7 @@
     <title>XEROX | Inicio</title>
 </head>
 
-<body>
+<body class="mainBody">
     <header class="container-fluid fixed-top">
         <div>
             <div class="divHeader">
@@ -25,18 +26,19 @@
                 <nav class="navbar searcher">
                     <div class="container-fluid ">
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2 " id="ingreso" type="search" placeholder="Search"
-                                aria-label="Search">
-                            <button class="btn btnSearch" id="btnSearch" type="submit">Search</button>
+                            <input class="form-control me-2 " id="ingreso" type="search" aria-label="Search">
+                            <button class="btn btnSearch botonSwal" id="btnSearch" type="submit">Buscar</button>
                         </form>
-                        <div class="caja dropdown"></div>
+                        <div id="cajaDiv">
+                            <div class="caja" id="caja"></div>
+                        </div>
                     </div>
                 </nav>
             </div>
 
             <nav class="navbar">
                 <div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    <button class="navbar-toggler btnTog" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -62,7 +64,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="navbar-nav me-auto">
+                        <ul class="navbar-nav me-auto ulNav">
                             <li class="xeroxLista col-lg-2 col-md-3 col-sm-4">
                                 <a href="./paginas/novedades.html">NOVEDADES</a>
                             </li>
@@ -73,17 +75,29 @@
                                 <a href="./paginas/registro.html">REGISTRARSE</a>
                             </li>
                         </ul>
-                        <div class="dropdown ">
-                            <button class="btn btn-secondary dropdown-toggle btnShop" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="./img/icons8-carrito-de-compras-48.svg" alt="">
-                            </button>
-                            <div class="dropdown">
-                                <div class="dropdown-menu carritoUl">
-
+                        <nav class="navbar">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                    aria-label="Toggle navigation">
+                                    <img src="./img/icons8-carrito-de-compras-48.svg" alt="">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                                    aria-labelledby="offcanvasNavbarLabel">
+                                    <div class="offcanvas-header">
+                                        <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Carrito de compras</h3>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body textShop carritoUl">
+                                        <div class="listaItems">
+                                        </div>
+                                        <button class="btnConfirm">Comprar objetos en carrito</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </nav>
                     </div>
                 </div>
             </nav>
@@ -97,6 +111,12 @@
                     <li class="breadcrumb-item active" aria-current="page">Inicio</li>
                 </ol>
             </nav>
+            <div class="alert alert-success divAlert" id="alerta" role="alert">
+                <h4 class="alert-heading">¡¡Bienvenivo a XEROX!!</h4>
+                <p>En esta página encontrarás tus comics, mangas y videojuegos favoritos.</p>
+                <hr>
+                <p>Esta ventana se cerrará en 10 segundos</p>
+            </div>
 
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -149,7 +169,7 @@
             </div>
 
             <h2>Recomendados</h2>
-            <div class="lista ">
+            <div class="lista">
                 <div class="card text-center divLista" style="width: 18rem;">
                     <img src="./img/the-last-of-us-parte-i-202261012304123_1.avif" class="card-img-top"
                         alt="the last of us portada">
@@ -315,8 +335,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="js/main.js"></script>
+    <script src="js/sweetalert.min.js"></script>
 </body>
 
 </html>

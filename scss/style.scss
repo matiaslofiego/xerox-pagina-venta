@@ -87,6 +87,7 @@ body {
 				div {
 					display: flex;
 					flex-direction: column;
+					align-items: center;
 
 					form {
 						align-items: baseline;
@@ -186,7 +187,7 @@ body {
 						margin-left: 100px;
 					}
 
-					ul.navbar-nav {
+					ul.ulNav {
 						font-family: $font-family_1;
 						font-weight: 600;
 						font-style: normal;
@@ -221,12 +222,35 @@ body {
 						border-radius: 20px;
 						margin-left: 50px;
 					}
-					div{
-						z-index: 1;
-						div.carritoUl{
-							ul{
+
+					div {
+						div.carritoUl {
+							ul.ulJs {
 								display: flex;
 								flex-direction: column;
+								align-items: center;
+								.jsImg {
+									height: 220px;
+									width: 175px;
+									margin-top: 30px;
+								}
+
+								div.jsDiv {
+									display: flex;
+									flex-direction: column;
+
+									div {
+										display: flex;
+										flex-direction: column;
+										a {
+											font-size: 20px;
+										}
+									}
+								}
+
+								button {
+									height: 40px;
+								}
 							}
 						}
 					}
@@ -299,7 +323,7 @@ body {
 				margin-bottom: 10px;
 
 				ol.breadcrumb {
-					margin: 27px 0px 0px 20px;
+					margin: 45px 0px 0px 20px;
 
 					li {
 						text-decoration: none;
@@ -416,11 +440,13 @@ body {
 								}
 							}
 						}
-						div{
-							button.carritoBtn{
+
+						div {
+							button.carritoBtn {
 								background-color: $background-color_1;
 								border: 0;
-								&:hover{
+
+								&:hover {
 									background-color: $background-color_2;
 									color: black;
 								}
@@ -444,6 +470,7 @@ body {
 		}
 	}
 }
+
 
 nav {
 	ul {
@@ -482,6 +509,22 @@ a {
 	width: 175px;
 	margin-top: 30px;
 }
+
+.textShop {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.btnConfirm {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.hide {
+	display: none;
+}
+
 
 @media screen and (min-width: 0px) and (max-width:1535px) {
 	body {
@@ -663,6 +706,7 @@ a {
 
 				div {
 					flex-direction: column;
+
 					div.divProd {
 						div.prodTitulo {
 							margin-top: 80px;
@@ -679,7 +723,7 @@ a {
 		header {
 			nav.navbar {
 				div {
-					button.navbar-toggler {
+					button.btnTog {
 						display: none;
 					}
 
